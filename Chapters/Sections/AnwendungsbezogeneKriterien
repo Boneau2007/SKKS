@@ -6,5 +6,10 @@ Jedoch ist zu beachten, das Anwendungsbezogene Kriterien und Anwenderbezogene Kr
 da sich beispielsweise eine leicht erlernbare Sprache sich negativ auf die Mächtigkeit auswirken könnte und umgekehrt.
 
 subsection{Nutzungspotenzial}
+Das Nutzungspotenzial gibt Aussagen darüber, wie gut die verwendete Sprache Eigenschaften in einem darzustellenden Sachverhalt
+beschreibt. Darunter fällt wie Präzise diese Aussagen sind und wie hoch der Detailgrad der darzustellenden Eigenschaft ist. 
+Je größer dieser Sprachumfang ist, desto größer ist auch die Mächtigkeit der Sprache. Nun ist es schwierig eine Aussage darüber 
+zu treffen, inwiefern eine Sprache für eine Anwendungsdomäne, wie der von Telekommunikationsprozessen, eine vollständige
+Beschreibung der Konzepte stellt.
 
 subsection{Funktionalität}
