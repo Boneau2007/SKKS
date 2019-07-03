@@ -1,12 +1,12 @@
 \section{\acf{SDL}}
 \label{sc:SDL}
 Die \ac{SDL} (SDL, engl. Spezifikations und Beschreibungssprache) ist eine von der \ac{ITU-T} (ITU-T, engl. Internationalen 
-Telekommunikations Vereinigung für Standardisierung der Telekommunikation) standardisierte Modellierungssprache und wurde erstmalig 
+Telekommunikations Vereinigung für Standardisierung der Telekommunikation) standardisierte objektorientierte Modellierungssprache und wurde erstmalig 
 1976 definiert. Die aktuellste Version von \ac{SDL} ist SDL-2010, welche eine Überarbeitung der SDL-Version SDL-2000 aus dem Jahre 
 1999 ist. Wenn im folgenden von \ac{SDL} gesprochen wird, wird immer die Version \acs{SDL}-2010 gemeint. In den letzten 
 Überarbeitungen wurde die Definition von \ac{SDL} um objekt-orientierte Aspekte erweitert und mit Sprachen wie UML und ASN.1 
-harmonisiert. \ac[SDL} wird zur Beschreibung von Telekommunikationssystemen und deren Abläufen, sowie für Protokoll Definitionen 
-und verteilten Systemen eingesetzt. Der Hauptfokus von \ac{SDL} ist, sich einen genauen Überblick über das Verhalten genannter 
+harmonisiert. \ac[SDL} wird zur Beschreibung von Telekommunikationssystemen, deren Abläufe, sowie für Protokoll Definitionen 
+und in verteilten Systemen eingesetzt. Der Hauptfokus von \ac{SDL} ist, sich einen genauen Überblick über das Verhalten genannter 
 Systeme zu machen, wobei Eigenschaften mit anderen Techniken beschrieben werden müssen. Dazu konzentriert sich die Anwendung der 
 Spezifikation unter anderem auf Echtzeitanwendungen, welche in der Spezifikation genauer zusammengefasst und beschrieben werden.
 
@@ -32,13 +32,23 @@ Aspekte der Sprache in sich vereinigt. So hat die \ac{ITU-T} selbst ein Meta-Met
 ab.
 
 \subsection{Architektur}
-\ac{SDL} strukturiert sich hierarchich aus drei Bausteinen, wobei Block und Prozess auch als Agenten bezeichet werden, welche sich durch ihre nebenläufigen Aufgaben unterscheiden.
+\ac{SDL} strukturiert sich aus Funktionsbausteinen wobei die Bausteine Block und Prozess auch als Agenten bezeichet werden. 
+Durch das aufteilen des Systems in viele kleinere Teilsysteme, macht es das Entwickeln in größeren Gruppen einfacher. 
+Folgende Abbildung x.x veranschaulicht den Aufbau der Architektur.
 \begin{itemize}{
-\item[System Agent]
-\item[Block Agent]
-\item[Prozess Agent] 
+\item[System]
+In dem \ac{SDL}-System werden die die Funktionsbausteine hierarchich struckturiert. 
+\item[Block/Agent]
+Prozesse werden logisch in Blöcke eingeteilt. Ein Block kann auch wiederrum in einen Block logisch eingeteilt werden.
+\item[Prozess/Agent]
+Prozessagenten bestehen aus \ac{EFSM}s
 \end{itemize}
+
 \subsection{Kommunikation}
+\subsubsection{Asynchrone Kommunikation}
+\subsubsection{Synchrone remote procedure calls}
 \subsection{Verhalten}
 \subsection{Daten}
+In SDL können auf zwei Arten daten beschrieben werden, einerseits mit dem \ac{ADT}(abstract data type) oder mit \ac{ASN1}. Dadurch können Daten unter Sprachen ausgetasucht werden und bereits bestehende Datenstruckturen wiederverwendet werden. \ac{ADT} hingegen definiert keine Datenstruckturen sondern ledichlich einen Satz an Werten, Operations und Bedingungen. Folgende Abbildung x.x veranschaulicht dies an einem Beispiel. \ac{SDL} beschreibt noch einen fortgeschritteren Ansatz von \ac{ADT}, wo Operationen unter anderem zum verstecken von Datenmanipulation verwendet werden, dies kann bei weiterem Interesse in der Spezifikation [Spezifikation eintragen] nachgelesen werden.    
+\subsection{Vererbung} 
 \subsection{Diagramarten}
