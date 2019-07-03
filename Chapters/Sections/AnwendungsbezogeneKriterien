@@ -1,0 +1,10 @@
+\section{Anwendungsbezogene Kriterien}
+Anwendungsbezogene Kriterien beschreiben die Nutzung von Modellierungssprachen aus Sicht des Anwenders idR. abhängig 
+von ihrem Domänenspezifischen Einsatz. So besitzen verschiedene Modellierungssprachen einen unterschiedlich großes 
+Nutzungspotenzial im jeweiligen Bereich. Man spricht in diesem Zusammenhang auch von der Mächtigkeit der Sprache. 
+Jedoch ist zu beachten, das Anwendungsbezogene Kriterien und Anwenderbezogene Kriterien konkurrieren können, 
+da sich beispielsweise eine leicht erlernbare Sprache sich negativ auf die Mächtigkeit auswirken könnte und umgekehrt.
+
+subsection{Nutzungspotenzial}
+
+subsection{Funktionalität}
