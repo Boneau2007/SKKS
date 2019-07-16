@@ -2,66 +2,44 @@
 \label{sc:SDL}
 Die \ac{SDL} (SDL, engl. Spezifikations und Beschreibungssprache) ist eine von der \ac{ITU-T} (ITU-T, engl. Internationalen 
 Telekommunikations Vereinigung für Standardisierung der Telekommunikation) standardisierte objektorientierte Modellierungssprache und wurde erstmalig 
-1976 definiert. Die aktuellste Version von \ac{SDL} ist SDL-2010, welche eine Überarbeitung der SDL-Version SDL-2000 aus dem Jahre 
+1976 definiert. Die aktuellste Version von \ac{SDL} ist \textbf{SDL}-2010, welche eine Überarbeitung der \textbf{SDL}-Version \textbf{SDL}-2000 aus dem Jahre 
 1999 ist. Wenn im folgenden von \ac{SDL} gesprochen wird, wird immer die Version \acs{SDL}-2010 gemeint. In den letzten 
 Überarbeitungen wurde die Definition von \ac{SDL} um objekt-orientierte Aspekte erweitert und mit Sprachen wie UML und ASN.1 
-harmonisiert. \ac{SDL} wird zur Beschreibung von Telekommunikationssystemen, deren Abläufe, sowie für Protokoll Definitionen 
-und in verteilten Systemen eingesetzt. Der Hauptfokus von \ac{SDL} ist, sich einen genauen Überblick über das Verhalten genannter 
-Systeme zu machen, wobei Eigenschaften mit anderen Techniken beschrieben werden müssen. Dazu konzentriert sich die Anwendung der 
-Spezifikation unter anderem auf Echtzeitanwendungen, welche in der Spezifikation genauer zusammengefasst und beschrieben werden.
+harmonisiert. \ac{SDL} wird zur Beschreibung von Telekommunikationssystemen, deren Abläufe, sowie für Protokoll Definitionen und in verteilten Systemen eingesetzt. Der Anwendungsbereich erstreckt sich über komplexe ereignisgesteuerte, interaktiven Echtzeitanwendungen, welche über Nachrichten miteinander kommunizieren. Der Hauptfokus von \ac{SDL} ist, sich einen genauen Überblick über das Verhalten genannter Systeme zu machen, wobei Eigenschaften mit anderen Techniken beschrieben werden müssen. So wird \ac{MSC} unter anderem zum Beschreiben von Interaktionsverhalten zwischen Systemen, \ac{ASN.1} für die Beschreibung von Datentypen und \ac{TTCN-3} für Tests verwendet.
 
-\subsection{Spracheigenschaften}
-\label{ssc:Spracheigenschaften}
-Die Eigenschaften der Sprachdefinition von \ac{SDL} sind folgend beschrieben[REC111P.3]:
-\begin{itemize}{
-\item[Abstrakte Grammatik] Die abstrakte Grammatik von \ac{SDL} wird von einer abstrakten Syntax und  statischen Bedingungen 
-beschrieben. Die Abstrakte Syntax kann entweder mit einer textbasierten Grammatik oder einem grafischen Metamodell erstellt werden.
-
-\item[Konkrete Grammatik] Die konkrete Syntax wird durch eine grafische Syntax, statischen Bedingungen und Regeln für die grafische Syntax beschrieben.
-Beschrieben wird sie durch die erweiterte Backus-Naur Form. Wenn jedoch in der abstrakten Grammatik ein 
-grafisches Metamodell verwendet wurde, ist es erlaubt dieses um kontrkete Eigenschaften zu erweitert und zu verwenden.
-
-\item[Semantik] Die Semantik beschreibt ein Konstrukt,samt dessen Eigenschaften, Interpretation und dynamischen Bedingungen.
-
-\item[Model] Ein Model gibt Notationen eine Abbildungsform, wenn diese keine direkte abstrakten Syntax besitzen.
-}\end{itemize}
-
-\subsubsection{Metamodell}
-\label{ssc:Metamodell}
-Es werden Anstrengungen unternommen, jedoch existiert derzeit kein öffentlich zugängliches Metamodell von \ac{SDL}, welches alle 
-Aspekte der Sprache in sich vereinigt. So hat die \ac{ITU-T} selbst ein Meta-Metamodell auf Grundlage von 
-\ac{UML} zu erstellen, jedoch deckt diese Definition, welche auch SDL-UML genannt wird, nur Teile der Sprachdefinition von \ac{SDL} 
-ab.
 
 \subsection{Architektur}
 \label{ssc:Architektur}
-Die \ac{SDL}-Spezifikation erlaubt die struckturierte Trennung in Diagramme und Packete und somit ein aufteilen eines Systems in viele kleinere Teilsysteme, wodurch die Entwicklung in größeren Gruppen vereinfacht wird. Dies fürht ebenzu dazu, dass andere Sprachen in Packete definiert werden können und so zur Sprachdefinition hinzukommen können. Die Struktur ist hierarchich gegliedert und besteht aus Prozessen, welche logisch in Blöcke gegliedert werden können und durch endliche Automaten dargestellt werden. Diese Blöcke können in sich selbst gegliedert werden und bilden einzeln oder zusammen dann die höchste Ebene, das System. Diese Strucktur wird anhand folgender Abbildung x.x veranschaulicht.
+Die \ac{SDL}-Spezifikation erlaubt die strukturierte Trennung in Diagramme und Pakete und somit ein aufteilen eines Systems in viele kleinere Teilsysteme, wodurch die Entwicklung in größeren Gruppen vereinfacht wird. Dies führt zu dazu, dass andere Sprachen in Pakete definiert werden können und so eine Erweiterung durch andere Sprachdefinitionen möglich ist. Die Struktur ist hierarchisch gegliedert und besteht aus Prozessen, die logisch in Blöcke unterteilt werden können. Prozesse sind durch untereinander kommunizierende endliche Automaten dargestellt, welche abstrakte Datentypen und Merkmale von Objektorientierung besitzen. Die Blöcke können in sich selbst gegliedert werden und bilden einzeln oder zusammen dann die höchste Ebene, das System. Diese Struktur wird anhand folgender Abbildung x.x veranschaulicht.
 
 \subsubsection{Agenten}
-In der Sprachdefinition von \ac{SDL} ist von sogenannten Angenten die rede. Ein Agent beschreibt eine Menge an Angenten. Diese Agenten bestehen aus Attributen, Prozeduren oder endlichen Automaten und wiederum enthaltenen Agenten. \ac{SDL} besitzt zwei Arten von Agenten, die eben genannten Blöcke und Prozesse. Folgende Abbildung x.x veranschaulicht den Aufbau der Architektur.
+In der Sprachdefinition von \ac{SDL} ist von sogenannten Agenten die rede. Ein Agent beschreibt eine Menge an Agenten. Diese Agenten bestehen aus Attributen, Prozeduren oder endlichen Automaten und wiederum enthaltenen Agenten. \ac{SDL} besitzt zwei Arten von Agenten, die eben genannten Blöcke und Prozesse. Folgende Abbildung x.x veranschaulicht den Aufbau der Architektur.
 \begin{itemize}
-\item[System] In dem \ac{SDL}-System werden die die Funktionsbausteine hierarchich struckturiert. 
-\item[Block] Prozesse werden logisch in Blöcke eingeteilt. Ein Block kann auch wiederrum in einen Block logisch eingeteilt werden.
-\item[Prozess] Prozessagenten bestehen aus \ac{EFSM}s
-\item[Prozedur] Prozessagenten bestehen aus \ac{EFSM}s
+\item[System] In dem \ac{SDL}-System werden die die Funktionsbausteine hierarchisch strukturiert. Der Agent System ist selbst ein Container für Blöcke. 
+\item[Block] Prozesse werden logisch in Blöcke eingeteilt. Ein Block kann auch wiederum in einen Block logisch untergliedert werden.
+\item[Prozess] Prozessagenten bestehen aus \ac{EFSM}s und sind hierarchisch auf der niedrigsten Ebene definiert 
 \end{itemize}
 
 \subsection{Kommunikation}
 \label{ssc:Kommunikation}
-\subsubsection{Asynchrone Kommunikation}
-\label{sssc:AKommunikation}
-\subsubsection{Synchrone remote procedure calls}
-\label{sssc:KommunikationRPC}
+Die Kommunikation von \ac{SDL} beschreibt eine asynchrone Übertragung von Nachrichten bzw. diskreten Signalen über Kanäle. Diese können sowohl auf Systemebene, als auch auf Blockebene definiert werden. Jede Nachricht besitzt einen Namen, optionale Parameter und kann in eine Liste gruppiert werden. 
+Die Kanäle enthalten ebenfalls Namen und verbinden die einzelnen Agenten untereinander oder mit der Umgebung. Ein Kanal besteht immer aus einer Quelle und einem Endpunkt. Dieser muss entweder in einem Prozess oder in die Umgebung enden. 
+
 \subsection{Verhalten}
 \label{ssc:Verhalten}
+Das Verhalten von \ac{SDL} wird in Prozessen definiert, welche durch \ac{EFSM}s repräsentiert werden.
+###
+Die Modellierung der Automaten richtet sich nach Mealy, wobei die Ausgabe von seinem Zustand und seiner Eingabe abhängt. Im Gegensatz zu Moore-Automaten enthält er keinen Startzustand, wobei jeder Mealy-Automat in einen Moore-Automat übertragen werden kann.
+###
+Diese Automaten können Operationen an Daten vornehmen und kommunizieren über Nachrichten welche am Endpunkt des Kanals gelistet sind.
+
+
 \subsection{Daten}
 \label{ssc:Daten}
-In SDL können auf zwei Arten daten beschrieben werden, einerseits mit dem \ac{ADT}(abstract data 
-type) oder mit \ac{ASN1}. Dadurch können Daten unter Sprachen ausgetasucht werden und bereits 
-bestehende Datenstruckturen wiederverwendet werden. \ac{ADT} hingegen definiert keine 
-Datenstruckturen sondern ledichlich einen Satz an Werten, Operations und Bedingungen. Folgende 
+In \ac{SDL} sind Daten auf zwei Arten beschrieben, einerseits mit dem \ac{ADT}(abstract data type) oder mit \ac{ASN1}. \ac{ADT} definiert keine 
+Datenstrukturen, sondern jeweils einen Satz an Werten, Operation und Bedingungen. In \ac{ADT} sind einige Datentypen wie Boolean oder Integer vordefiniertl. Die vollständige Liste ist in der Spezifikation zu entnehmen [101/4 S.?].  Dadurch können Daten unter Sprachen ausgetauscht werden und bereits bestehende Datenstrukturen wiederverwendet werden. Folgende 
 Abbildung x.x veranschaulicht dies an einem Beispiel. \ac{SDL} beschreibt noch einen 
-fortgeschritteren Ansatz von \ac{ADT}, wo Operationen unter anderem zum verstecken von 
+fortgeschrittener Ansatz von \ac{ADT}, wo Operationen unter anderem zum verstecken von 
 Datenmanipulation verwendet werden, dies kann bei weiterem Interesse in der Spezifikation 
 [Spezifikation eintragen] nachgelesen werden.    
 \subsection{Vererbung} 
@@ -70,3 +48,26 @@ Datenmanipulation verwendet werden, dies kann bei weiterem Interesse in der Spez
 
 \subsection{Diagramarten}
 \label{ssc:Diagramarten}
+
+\subsection{Spracheigenschaften}
+\label{ssc:Spracheigenschaften}
+Die Eigenschaften der Sprachdefinition von \ac{SDL} sind folgend beschrieben[REC111P.3]:
+\begin{itemize}{
+		\item[Abstrakte Grammatik] Die abstrakte Grammatik von \ac{SDL} wird von einer abstrakten Syntax und  statischen Bedingungen 
+		beschrieben. Die Abstrakte Syntax kann entweder mit einer textbasierten Grammatik oder einem grafischen Metamodell erstellt werden.
+		
+		\item[Konkrete Grammatik] Die konkrete Syntax wird durch eine grafische Syntax, statischen Bedingungen und Regeln für die grafische Syntax beschrieben.
+		Beschrieben wird sie durch die erweiterte Backus-Naur Form. Wenn jedoch in der abstrakten Grammatik ein 
+		grafisches Metamodell verwendet wurde, ist es erlaubt dieses um kontrkete Eigenschaften zu erweitert und zu verwenden.
+		
+		\item[Semantik] Die Semantik beschreibt ein Konstrukt,samt dessen Eigenschaften, Interpretation und dynamischen Bedingungen.
+		
+		\item[Model] Ein Model gibt Notationen eine Abbildungsform, wenn diese keine direkte abstrakten Syntax besitzen.
+}\end{itemize}
+
+\subsubsection{Metamodell}
+\label{ssc:Metamodell}
+Es werden Anstrengungen unternommen, jedoch existiert derzeit kein öffentlich zugängliches Metamodell von \ac{SDL}, welches alle 
+Aspekte der Sprache in sich vereinigt. So hat die \ac{ITU-T} selbst ein Meta-Metamodell auf Grundlage von 
+\ac{UML} zu erstellen, jedoch deckt diese Definition, welche auch SDL-UML genannt wird, nur Teile der Sprachdefinition von \ac{SDL} 
+ab.
