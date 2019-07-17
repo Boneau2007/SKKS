@@ -1,38 +1,77 @@
 \section{\acf{SDL}}
 \label{sc:SDL}
-Die \ac{SDL} (SDL, engl. Spezifikations und Beschreibungssprache) ist eine von der \ac{ITU-T} (ITU-T, engl. Internationalen 
-Telekommunikations Vereinigung für Standardisierung der Telekommunikation) standardisierte objektorientierte Modellierungssprache und wurde erstmalig 
-1976 definiert. Die aktuellste Version von \ac{SDL} ist \textbf{SDL}-2010, welche eine Überarbeitung der \textbf{SDL}-Version \textbf{SDL}-2000 aus dem Jahre 
-1999 ist. Wenn im folgenden von \ac{SDL} gesprochen wird, wird immer die Version \acs{SDL}-2010 gemeint. In den letzten 
-Überarbeitungen wurde die Definition von \ac{SDL} um objekt-orientierte Aspekte erweitert und mit Sprachen wie UML und ASN.1 
-harmonisiert. \ac{SDL} wird zur Beschreibung von Telekommunikationssystemen, deren Abläufe, sowie für Protokoll Definitionen und in verteilten Systemen eingesetzt. Der Anwendungsbereich erstreckt sich über komplexe ereignisgesteuerte, interaktiven Echtzeitanwendungen, welche über Nachrichten miteinander kommunizieren. Der Hauptfokus von \ac{SDL} ist, sich einen genauen Überblick über das Verhalten genannter Systeme zu machen, wobei Eigenschaften mit anderen Techniken beschrieben werden müssen. So wird \ac{MSC} unter anderem zum Beschreiben von Interaktionsverhalten zwischen Systemen, \ac{ASN.1} für die Beschreibung von Datentypen und \ac{TTCN-3} für Tests verwendet.
+Die \ac{SDL} (\ac{SDL}, engl. Spezifikations und Beschreibungssprache) ist eine von der \ac{ITU-T} (\ac{ITU-T}, engl. Internationalen 
+Telekommunikations- Vereinigung für Standardisierung der Telekommunikation) standardisierte objektorientierte Modellierungssprache und wurde erstmalig 
+1976 definiert. Die aktuellste Version von \ac{SDL} ist \ac{SDL}-2010, welche eine Überarbeitung der \ac{SDL}-Version \ac{SDL}-2000 aus dem Jahre 
+1999 ist. Wenn im folgenden von \ac{SDL} gesprochen wird, wird immer die Version \acs{SDL}-2010 gemeint. 
+In den letzten Überarbeitungen wurde die Definition von \ac{SDL} um objekt-orientierte Aspekte erweitert und mit Sprachen wie \ac{UML} und \ac{ASN1} harmonisiert.
+\ac{SDL} wird zur Beschreibung von Telekommunikationssystemen, deren Abläufe, sowie für Protokoll Definitionen und in verteilten Systemen eingesetzt.
+Der Anwendungsbereich erstreckt sich über komplexe ereignisgesteuerte, interaktiven Echtzeitanwendungen, welche über Nachrichten miteinander kommunizieren. 
+Der Hauptfokus von \ac{SDL} ist, sich einen genauen Überblick über das Verhalten genannter Systeme zu machen, wobei Eigenschaften mit anderen Techniken beschrieben werden müssen. 
+So wird \ac{MSC} unter anderem zum Beschreiben von Interaktionsverhalten zwischen Systemen, \ac{ASN1} für die Beschreibung von Datentypen und \ac{TTCN3} für Tests verwendet.
 
 
 \subsection{Architektur}
 \label{ssc:Architektur}
-Die \ac{SDL}-Spezifikation erlaubt die strukturierte Trennung in Diagramme und Pakete und somit ein aufteilen eines Systems in viele kleinere Teilsysteme, wodurch die Entwicklung in größeren Gruppen vereinfacht wird. Dies führt zu dazu, dass andere Sprachen in Pakete definiert werden können und so eine Erweiterung durch andere Sprachdefinitionen möglich ist. Die Struktur ist hierarchisch gegliedert und besteht aus Prozessen, die logisch in Blöcke unterteilt werden können. Prozesse sind durch untereinander kommunizierende endliche Automaten dargestellt, welche abstrakte Datentypen und Merkmale von Objektorientierung besitzen. Die Blöcke können in sich selbst gegliedert werden und bilden einzeln oder zusammen dann die höchste Ebene, das System. Diese Struktur wird anhand folgender Abbildung x.x veranschaulicht.
+Die \ac{SDL}-Spezifikation erlaubt die strukturierte Trennung in Diagramme und Pakete und somit ein aufteilen eines Systems in viele kleinere Teilsysteme,
+wodurch die Entwicklung in größeren Gruppen vereinfacht wird.
+Dies führt zu dazu, dass andere Sprachen in Pakete definiert werden können und so eine Erweiterung der \ac{SDL}-Spezifikation andere Sprachdefinitionen möglich ist.
+Die Struktur ist hierarchisch gegliedert und besteht aus Prozessen, die logisch in Blöcke unterteilt werden können.
+Prozesse sind durch untereinander kommunizierende endliche Automaten dargestellt, welche abstrakte Datentypen und Merkmale von Objektorientierung besitzen.
+Die Blöcke können in sich selbst gegliedert werden und bilden einzeln oder zusammen dann die höchste Ebene, das System. Diese Struktur wird anhand folgender Abbildung \ref{fig:ArchModell} veranschaulicht.
+ 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{test.png}
+	\caption{Architekturmodell}
+	\label{fig:ArchModell}
+\end{figure}
 
 \subsubsection{Agenten}
-In der Sprachdefinition von \ac{SDL} ist von sogenannten Agenten die rede. Ein Agent beschreibt eine Menge an Agenten. Diese Agenten bestehen aus Attributen, Prozeduren oder endlichen Automaten und wiederum enthaltenen Agenten. \ac{SDL} besitzt zwei Arten von Agenten, die eben genannten Blöcke und Prozesse. Folgende Abbildung x.x veranschaulicht den Aufbau der Architektur.
-\begin{itemize}
-\item[System] In dem \ac{SDL}-System werden die die Funktionsbausteine hierarchisch strukturiert. Der Agent System ist selbst ein Container für Blöcke. 
-\item[Block] Prozesse werden logisch in Blöcke eingeteilt. Ein Block kann auch wiederum in einen Block logisch untergliedert werden.
-\item[Prozess] Prozessagenten bestehen aus \ac{EFSM}s und sind hierarchisch auf der niedrigsten Ebene definiert 
-\end{itemize}
+Wie in Abbildung \ref{fig:ArchModell} zu sehen ist, wird die Struktur der Sprachdefinition durch sogenannte Agenten beschrieben.
+Das System ist in der Hierarchie der oberste Agent und kann eine Menge an Agenten enthalten jedoch selbst nicht in einem Agenten beinhaltet sein.
+Alles Außerhalb des Systems wird als Umgebung bezeichnet. Blöcke sind Container für Agenten, wodurch die Komplexität und die Größe von Systemen partitioniert wird.
+Das System selbst ist ein Block, welcher als Container für Blöcke verwendet wird. 
+Prozesse sind Agenten der untersten Ebene, sind innerhalb von Blöcken, können keine weiteren Agenten enthalten und bestehen aus \ac{EFSM}s.
+
 
 \subsection{Kommunikation}
 \label{ssc:Kommunikation}
-Die Kommunikation von \ac{SDL} beschreibt eine asynchrone Übertragung von Nachrichten bzw. diskreten Signalen über Kanäle. Diese können sowohl auf Systemebene, als auch auf Blockebene definiert werden. Jede Nachricht besitzt einen Namen, optionale Parameter und kann in eine Liste gruppiert werden. 
-Die Kanäle enthalten ebenfalls Namen und verbinden die einzelnen Agenten untereinander oder mit der Umgebung. Ein Kanal besteht immer aus einer Quelle und einem Endpunkt. Dieser muss entweder in einem Prozess oder in die Umgebung enden. 
+Die Kommunikation innerhalb von \ac{SDL} findet entweder asynchron über Nachrichten oder mit diskreten Signalen über Kanäle statt. 
+Diese können sowohl auf Systemebene, als auch auf Blockebene definiert werden.
+Jede Nachricht besitzt einen Namen, optionale Parameter und kann in eine Liste gruppiert werden. 
+Die Kanäle enthalten ebenfalls Namen und verbinden die einzelnen Agenten untereinander oder mit der Umgebung.
+Ein Kanal besteht immer aus einer Quelle und einem Endpunkt, welche Bi- oder Unidirektional definiert werden können. Der Kanal muss entweder in einem Prozess oder in die Umgebung enden.
+ Abbildung \ref{fig:KommModell} verdeutlicht dies in einem Beispiel.
+ 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{test.png}
+	\caption{Kommunikationsmodell}
+	\label{fig:KommModell}
+\end{figure}
+
+Wie in der Abbildung zu sehen ist...(Abbildung beschreiben)
+
 
 \subsection{Verhalten}
 \label{ssc:Verhalten}
-Das Verhalten von \ac{SDL} wird in Prozessen definiert, welche durch \ac{EFSM}s repräsentiert werden.
-###
-Die Modellierung der Automaten richtet sich nach Mealy, wobei die Ausgabe von seinem Zustand und seiner Eingabe abhängt. Im Gegensatz zu Moore-Automaten enthält er keinen Startzustand, wobei jeder Mealy-Automat in einen Moore-Automat übertragen werden kann.
-###
-Diese Automaten können Operationen an Daten vornehmen und kommunizieren über Nachrichten welche am Endpunkt des Kanals gelistet sind.
+Das Verhalten von \ac{SDL} wird in Prozessen definiert, welche wie eben besprochen, durch \ac{EFSM}s repräsentiert werden. Sie bestehen aus einer Menge an Zustandsübergängen, welche Beispielhaft in Abbildung \ref{fig:BspProzess} zu sehen sind. Darunter gehören Zustände wie [liste aufzählen]. Da eine Aufzählung den Rahmen sprengen würde, ist die Vollständige Liste aus der Spezifikation zu entnehmen. 
+Die Modellierung der Automaten richtet sich nach Mealy, wobei in diesem die Ausgabe von seinem Zustand und seiner Eingabe abhängt.
+Im Gegensatz zu Moore-Automaten enthält er keinen Startzustand, wobei jeder Mealy-Automat in einen Moore-Automat übertragen werden kann.
+Diese Automaten können Operationen an Daten vornehmen und kommunizieren über Nachrichten welche am Endpunkt des Kanals gelistet sind. Prozesse besitzen eine \ac{FIFO}-Eingabeschlange, welche der Prozess nach und nach abarbeitet. Kommen 2 Nachrichten gleichzeitig an, so ist es zufällig, welche der beiden Nachrichten zuerst ausgeführt wird. 
 
+\subsubsection{Zustände}
+\label{sssc:Verhalten}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{test.png}
+	\caption{Beispiel Prozess}
+	\label{fig:BspProzess}
+\end{figure}
+
+Wie in der Abbildung zu sehen ist...(Abbildung beschreiben)
 
 \subsection{Daten}
 \label{ssc:Daten}
@@ -41,9 +80,21 @@ Datenstrukturen, sondern jeweils einen Satz an Werten, Operation und Bedingungen
 Abbildung x.x veranschaulicht dies an einem Beispiel. \ac{SDL} beschreibt noch einen 
 fortgeschrittener Ansatz von \ac{ADT}, wo Operationen unter anderem zum verstecken von 
 Datenmanipulation verwendet werden, dies kann bei weiterem Interesse in der Spezifikation 
-[Spezifikation eintragen] nachgelesen werden.    
-\subsection{Vererbung} 
+[Spezifikation eintragen] nachgelesen werden. 
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{test.png}
+	\caption{Beispiel Prozess}
+	\label{fig:BspProzess}
+\end{figure}
+
+Wie in der Abbildung zu sehen ist...(Abbildung beschreiben)
+   
+\subsection{Objektorientierung} 
 \label{ssc:Vererbung}
+Die seit
 
 
 \subsection{Diagramarten}
