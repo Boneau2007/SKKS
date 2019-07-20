@@ -4,45 +4,36 @@ Die \ac{SDL} (\ac{SDL}, engl. Spezifikations und Beschreibungssprache) ist eine 
 Telekommunikations- Vereinigung für Standardisierung der Telekommunikation) standardisierte objektorientierte Modellierungssprache und wurde erstmalig 
 1976 definiert. Die aktuellste Version von \ac{SDL} ist \ac{SDL}-2010, welche eine Überarbeitung der \ac{SDL}-Version \ac{SDL}-2000 aus dem Jahre 
 1999 ist. Wenn im folgenden von \ac{SDL} gesprochen wird, wird immer die Version \acs{SDL}-2010 gemeint. 
-In den letzten Überarbeitungen wurde die Definition von \ac{SDL} um objekt-orientierte Aspekte erweitert und mit Sprachen wie \ac{UML} und \ac{ASN1} harmonisiert.
 \ac{SDL} wird zur Beschreibung von Telekommunikationssystemen, deren Abläufe, sowie für Protokoll Definitionen und in verteilten Systemen eingesetzt.
 Der Anwendungsbereich erstreckt sich über komplexe ereignisgesteuerte, interaktiven Echtzeitanwendungen, welche über Nachrichten miteinander kommunizieren. 
 Der Hauptfokus von \ac{SDL} ist, sich einen genauen Überblick über das Verhalten genannter Systeme zu machen, wobei Eigenschaften mit anderen Techniken beschrieben werden müssen. 
-So wird \ac{MSC} unter anderem zum Beschreiben von Interaktionsverhalten zwischen Systemen, \ac{ASN1} für die Beschreibung von Datentypen und \ac{TTCN3} für Tests verwendet.
+So wird \ac{MSC} unter anderem zum Beschreiben von Interaktionsverhalten zwischen Systemen, \ac{ASN1} für die Beschreibung von Datentypen und \ac{TTCN3} für Tests verwendet. In den letzten Überarbeitungen wurde die Spezifikation von \ac{SDL} um objekt-orientierte Aspekte erweitert und mit Sprachen wie \ac{UML} und \ac{ASN1} harmonisiert. \ac{SDL} kann entweder grafisch oder textuell beschrieben werden.
 
 
 \subsection{Architektur}
 \label{ssc:Architektur}
-Die \ac{SDL}-Spezifikation erlaubt die strukturierte Trennung in Diagramme und Pakete und somit ein aufteilen eines Systems in viele kleinere Teilsysteme,
-wodurch die Entwicklung in größeren Gruppen vereinfacht wird.
-Dies führt zu dazu, dass andere Sprachen in Pakete definiert werden können und so eine Erweiterung der \ac{SDL}-Spezifikation andere Sprachdefinitionen möglich ist.
-Die Struktur ist hierarchisch gegliedert und besteht aus Prozessen, die logisch in Blöcke unterteilt werden können.
-Prozesse sind durch untereinander kommunizierende endliche Automaten dargestellt, welche abstrakte Datentypen und Merkmale von Objektorientierung besitzen.
-Die Blöcke können in sich selbst gegliedert werden und bilden einzeln oder zusammen dann die höchste Ebene, das System. Diese Struktur wird anhand folgender Abbildung \ref{fig:ArchModell} veranschaulicht.
+Die \ac{SDL}-Spezifikation beschreibt ein hierarchisches System und erlaubt die strukturierte Trennung in Diagramme und Pakete und somit ein aufteilen eines Systems in viele kleinere Teilsysteme. Dies wirkt sich positiv auf die Entwicklung eines Systems in größeren Gruppen aus und vereinfacht diese. Ein System ist eine Menge an Blöcken, welche über Kanäle miteinander und der Umgebung außerhalb des Systems verbunden sind. Ein Kanal besitzt die Namen der Nachrichten bzw. Signale, welche über ihn übertragen werden können. Blöcke können Mengen von weiteren Blöcken enthalten oder  als Prozess verfeinert dargestellt werden. Ebenso können Prozesse eine Menge von Prozessen in sich definiert haben.
+Ein Prozess ist auf der untersten hierarchischen Ebene und beschreibt das dynamische Systemverhalten. Dies wird durch endliche Automaten, den \ac{EFSM} um genauer zu sein, beschrieben. Diese besitzen abstrakte Datentypen und Merkmale von Objektorientierung. Diese Strukturhierarchie wird anhand folgender Abbildung \ref{fig:ArchModell} veranschaulicht.
  
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\textwidth]{test.png}
-	\caption{Architekturmodell}
+	\caption{SDLs-Architekturhierarchie}
 	\label{fig:ArchModell}
 \end{figure}
 
 \subsubsection{Agenten}
-Wie in Abbildung \ref{fig:ArchModell} zu sehen ist, wird die Struktur der Sprachdefinition durch sogenannte Agenten beschrieben.
-Das System ist in der Hierarchie der oberste Agent und kann eine Menge an Agenten enthalten jedoch selbst nicht in einem Agenten beinhaltet sein.
-Alles Außerhalb des Systems wird als Umgebung bezeichnet. Blöcke sind Container für Agenten, wodurch die Komplexität und die Größe von Systemen partitioniert wird.
-Das System selbst ist ein Block, welcher als Container für Blöcke verwendet wird. 
-Prozesse sind Agenten der untersten Ebene, sind innerhalb von Blöcken, können keine weiteren Agenten enthalten und bestehen aus \ac{EFSM}s.
+Seit \ac{SDL}-2000 werden alle Funktionsblöcke übergreifend als Agenten bezeichnet. Der System-Agent, ist ein speziell ausgezeichneter Block-Agent. Er beinhaltet weitere Block-Agenten und definiert die Nachrichten mit denen über die Umgebung kommuniziert wird. Block- und Prozess-Agenten unterscheiden sich in über die Kontrolle ihrer Ausführungsart. Wo die Zustandsmaschinen von Block-Agenten nebenläufig ablaufen können, müssen Prozess-Agenten auf den Abschluss der in Ausführung befindlichen Transaktion warten um ihren Zustand wechseln zu können.
 
 
 \subsection{Kommunikation}
 \label{ssc:Kommunikation}
-Die Kommunikation innerhalb von \ac{SDL} findet entweder asynchron über Nachrichten oder mit diskreten Signalen über Kanäle statt. 
+Die Kommunikation innerhalb von \ac{SDL} findet asynchron über Nachrichten oder mit diskreten Signalen über Kanäle statt. 
 Diese können sowohl auf Systemebene, als auch auf Blockebene definiert werden.
 Jede Nachricht besitzt einen Namen, optionale Parameter und kann in eine Liste gruppiert werden. 
 Die Kanäle enthalten ebenfalls Namen und verbinden die einzelnen Agenten untereinander oder mit der Umgebung.
 Ein Kanal besteht immer aus einer Quelle und einem Endpunkt, welche Bi- oder Unidirektional definiert werden können. Der Kanal muss entweder in einem Prozess oder in die Umgebung enden.
- Abbildung \ref{fig:KommModell} verdeutlicht dies in einem Beispiel.
+Abbildung \ref{fig:KommModell} verdeutlicht dies in einem Beispiel.
  
 \begin{figure}[ht]
 	\centering
@@ -54,12 +45,13 @@ Ein Kanal besteht immer aus einer Quelle und einem Endpunkt, welche Bi- oder Uni
 Wie in der Abbildung zu sehen ist...(Abbildung beschreiben)
 
 
-\subsection{Verhalten}
+\subsection{Systemverhalten}
 \label{ssc:Verhalten}
-Das Verhalten von \ac{SDL} wird in Prozessen definiert, welche wie eben besprochen, durch \ac{EFSM}s repräsentiert werden. Sie bestehen aus einer Menge an Zustandsübergängen, welche Beispielhaft in Abbildung \ref{fig:BspProzess} zu sehen sind. Darunter gehören Zustände wie [liste aufzählen]. Da eine Aufzählung den Rahmen sprengen würde, ist die Vollständige Liste aus der Spezifikation zu entnehmen. 
+Das Verhalten von \ac{SDL} wird in Prozessen definiert, welche wie eben besprochen, mittels \ac{EFSM}s repräsentiert werden. Sie bestehen aus einer Menge an Zustandsübergängen, welche Beispielhaft in Abbildung \ref{fig:BspProzess} zu sehen sind. Darunter gehören Zustände wie [liste aufzählen]. Da eine Aufzählung dem Sinn der Arbeit nicht dienlich ist, wird in diesem Zusammenhang auf die Spezifikation verwiesen \cite{ITU18}.
+Ein Prozess besitzt einen Eingabepuffer zum Speichern von Nachrichten. Dieser Puffer übergibt nach dem \ac{FIFO}-Prinzip nacheinander die anstehenden Nachrichten des verbundenen Kanals an den Prozess. Kommen zwei Nachrichten von mehreren Kanälen gleichzeitig an einem Prozess an, so ist das Systemverhalten undefiniert und nach dem Zufall wird eine der beiden Nachrichten zuerst ausgeführt.
 Die Modellierung der Automaten richtet sich nach Mealy, wobei in diesem die Ausgabe von seinem Zustand und seiner Eingabe abhängt.
 Im Gegensatz zu Moore-Automaten enthält er keinen Startzustand, wobei jeder Mealy-Automat in einen Moore-Automat übertragen werden kann.
-Diese Automaten können Operationen an Daten vornehmen und kommunizieren über Nachrichten welche am Endpunkt des Kanals gelistet sind. Prozesse besitzen eine \ac{FIFO}-Eingabeschlange, welche der Prozess nach und nach abarbeitet. Kommen 2 Nachrichten gleichzeitig an, so ist es zufällig, welche der beiden Nachrichten zuerst ausgeführt wird. 
+
 
 \subsubsection{Zustände}
 \label{sssc:Verhalten}
@@ -73,32 +65,16 @@ Diese Automaten können Operationen an Daten vornehmen und kommunizieren über N
 
 Wie in der Abbildung zu sehen ist...(Abbildung beschreiben)
 
+\subsection{Timer}
+
 \subsection{Daten}
 \label{ssc:Daten}
-In \ac{SDL} sind Daten auf zwei Arten beschrieben, einerseits mit dem \ac{ADT}(abstract data type) oder mit \ac{ASN1}. \ac{ADT} definiert keine 
-Datenstrukturen, sondern jeweils einen Satz an Werten, Operation und Bedingungen. In \ac{ADT} sind einige Datentypen wie Boolean oder Integer vordefiniertl. Die vollständige Liste ist in der Spezifikation zu entnehmen [101/4 S.?].  Dadurch können Daten unter Sprachen ausgetauscht werden und bereits bestehende Datenstrukturen wiederverwendet werden. Folgende 
-Abbildung x.x veranschaulicht dies an einem Beispiel. \ac{SDL} beschreibt noch einen 
-fortgeschrittener Ansatz von \ac{ADT}, wo Operationen unter anderem zum verstecken von 
-Datenmanipulation verwendet werden, dies kann bei weiterem Interesse in der Spezifikation 
-[Spezifikation eintragen] nachgelesen werden. 
+In \ac{SDL} sind Daten auf zwei Arten beschrieben, einerseits mit dem \acs{ADT} oder mit \ac{ASN1}. \ac{ADT} definiert keine 
+Datenstrukturen, sondern jeweils einen Satz an Werten, Operation und Bedingungen. In \ac{ADT} sind einige Datentypen wie Boolean, Character, Charstring Integer und Real vordefiniert, nur um die gängigsten zu nennen. Eine Liste der vordefinierten Datentypen kann aus der Spezifikation entnommen werden [101/4 S.?]. Neue Datentypen lassen sich durch bereits vorhandene Datentypen definieren, hierzu sind Einschränkungen und ein Standardwert in der Definition mit anzugeben. Abbildung \ref{fig:KommModell} verdeutlicht dies in einem Beispiel. In jedem Agenten lassen sich Konstanten, basierend auf den gewählten Datentypen definieren. Sie müssen einen konstanten Wert enthalten und dürfen nicht verändert werden. Variablen können nur in Prozessen definiert werden, enthalten denselben Aufbau wie Konstanten und können nur in ihrem definierten Prozess geändert werden. Zwar sind keine globalen Variablen zulässig, jedoch können Prozess eigene Variablen anderen Prozessen sichtbar gemacht werden. Diese Variablen nennt man remote variables.
 
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=1\textwidth]{test.png}
-	\caption{Beispiel Prozess}
-	\label{fig:BspProzess}
-\end{figure}
-
-Wie in der Abbildung zu sehen ist...(Abbildung beschreiben)
-   
 \subsection{Objektorientierung} 
 \label{ssc:Vererbung}
-Die seit
-
-
-\subsection{Diagramarten}
-\label{ssc:Diagramarten}
+Die objektorientierten Konzepte von \ac{SDL} bieten dem Anwender eine Möglichkeit sein System zu strukturieren und wiederzuverwenden. So ist es möglich für einen Prozess-/Block-Agenten eine Prozess-/Block-Klasse zu erstellen.
 
 \subsection{Spracheigenschaften}
 \label{ssc:Spracheigenschaften}
