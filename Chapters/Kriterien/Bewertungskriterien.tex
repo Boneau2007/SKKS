@@ -2,20 +2,23 @@
 
 \chapter{Bewertungskriterien}
 \label{ch:Bewertungskriterien}
-\section{Einführung}
-Im folgenden werden Kriterien vorgestellt, die helfen, eine Modellierungssprache zu bewerten. Dabei
-handelt es sich um Eigenschaften und deren Ausprägung in einer Modellierungssprache. Sie können
-auf die Modellierungssprache in ihrer Gesamtheit, aber auch auf einzelne Bestandteile oder Sprachmittel
-angewendet werden. In vielen Fällen bestehen zwischen den einzelnen Eigenschaften enge Beziehungen.
-Je nachdem für welchen Sprachbestandteil die Bewertung vorgenommen wird, können andere
-Maße für die Bewertung verwendet werden. Für viele der hier vorgestellten Merkmale gibt es jedoch
-keine exakten Bewertungsverfahren, inwieweit das Merkmal erfüllt ist oder nicht.\\
-Grundsätzlich werden die Kriterien in drei Kategorien eingeteilt: die formalen, anwenderbezogenen und anwendungsbezogenen Kriterien.
-Die folgenden drei Abschnitte beschreiben diese Kriterien genauer.
+In diesem Kapitel werden die für eine Eignung bzw. Uneignung benötigten Kriterien vorgestellt.
+Sie sollen helfen, eine Modellierungssprache zu bewerten. Dazu sind die Kriterien in Hauptkategorien untergliedert und werden im Verlauf weiter aufgelöst. 
+Dabei handelt es sich um Eigenschaften und deren Ausprägung in einer Modellierungssprache.
+Sie können auf die Modellierungssprache in ihrer Gesamtheit, aber auch auf einzelne Bestandteile oder Sprachmittel angewendet werden.
+In vielen Fällen bestehen zwischen den einzelnen Eigenschaften enge Beziehungen.
+Je nachdem für welchen Sprachbestandteil die Bewertung vorgenommen wird, können andere Maße für die Bewertung verwendet werden.
+Für viele der hier vorgestellten Merkmale gibt es jedoch keine exakten Bewertungsverfahren, inwieweit das Merkmal erfüllt ist oder nicht.
+Die Kriterien sind in drei Kategorien eingeteilt, auf welche im Folgenden eingegangen wird:
 
+\begin{itemize}
+	\item Formale Kriterien
+	\item Anwenderbezogene Kriterien
+	\item Anwendungsbezogene Kriterien
+\end{itemize}
 
 \section{Formale Kriterien}  
-Die formalen Kriterien werden in die fünf Einzelkriterien Korrektheit, Vollständigkeit, Einheitlichkeit, Redundanzfreiheit und Strukturierbarkeit unterteilt.
+Die formalen Kriterien werden in die fünf Einzelkriterien Korrektheit, Vollständigkeit, Einheitlichkeit, Redundanzfreiheit und Struktureierbarkeit unterteilt.
 \subsection{Korrektheit}
 Eine Modellierungssprache genügt dem Kriterium der Korrektheit, wenn sie unzulässige Modelle eindeutig identifiziert und gleichzeitig erlaubt, die Menge aller zulässigen Modelle zu generieren. Zu unterscheiden ist dabei die syntaktische Korrektheit sowie die semantische Korrektheit der Modelle. Die semi-formalen Prozessmodellierungssprachen, welche für die Prozessdokumentation in Frage kommen, besitzen in der Regel keine eindeutig festgelegte Semantik, sodass hier vor allem die Möglichkeit der automatischen Überprüfung einer korrekten Syntax des Modells im Vordergrund steht. Das Kriterium der Korrektheit steht in enger Verbindung zum Grundsatz der Richtigkeit der Grundsätze ordnungsgemäßer Modellierung.
 \subsection{Vollständigkeit}
@@ -40,9 +43,9 @@ anschaulich sein. Andererseits ist hier an den Umstand zu denken, dass Modelle d
 oder geplanter Realität dienen. Solche Abbildungen können grundsätzlich fehlbar sein. Ein
 Modell sollte seine Überprüfung an der Realität unterstützen. \\
 
-Ein Modell ist dann anschaulich, wenn es möglichst direkt mit Wahrnehmungsmustern und Konzeptualisierungen
-des Betrachters korrespondiert. Wahrnehmungsmuster und Konzeptualisierungen
-streuen aber bekanntlich interpersonell und intrapersonell (der Mensch ist lernfähig). Anschaulichkeit
+Ein Modell ist dann anschaulich, wenn es möglichst direkt mit Wahrnehmungsmustern und Konzeptualisierung
+des Betrachters korrespondiert. Wahrnehmungsmuster und Kontextualisierungen
+streuen aber bekanntlich interpersonell und interpersonell (der Mensch ist lernfähig). Anschaulichkeit
 in diesem Sinn hängt einerseits den jeweils gewählten Abstraktionen und Bezeichnern ab, andererseits
 von der jeweiligen Modellierungssprache (worauf noch einzugehen sein wird). Die Beurteilung der
 Beziehung zwischen Modell und Realität liegt in der Regel allein bei den Betrachtern. Die Anschaulichkeit
@@ -50,7 +53,7 @@ eines Modells ist also grundsätzlich geeignet, seine Überprüfbarkeit zu förd
 dass das Verhältnis des Modells zur Realität durch möglichst genaue Abbildungsvorschriften
 erläutert wird. \\
 \subsubsection{Konsequenzen für Modellierungssprachen} 
-Da Wahrnehmungsmuster und Konzeptualisierungen weit und in subtiler Weise streuen, sind generelle
+Da Wahrnehmungsmuster und Konzeptualisierung weit und in subtiler Weise streuen, sind generelle
 Aussagen über die Wirkung einer Modellierungssprache auf die Anschaulichkeit eines Modells kaum
 möglich. Allgemein lässt sich vermuten, dass Syntax und Semantik einer Modellierungssprache tendenziell
 dann als anschaulich empfunden werden, wenn sie eine deutliche Nähe zu Sprachmitteln aufweisen,

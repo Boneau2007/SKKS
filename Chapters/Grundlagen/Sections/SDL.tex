@@ -5,10 +5,10 @@ Telekommunikations- Vereinigung für Standardisierung der Telekommunikation) sta
 1976 definiert. Die aktuellste Version von \ac{SDL} ist \ac{SDL}-2010, welche eine Überarbeitung der \ac{SDL}-Version \ac{SDL}-2000 aus dem Jahre 
 1999 ist. Wenn im folgenden von \ac{SDL} gesprochen wird, wird immer die Version \acs{SDL}-2010 gemeint. 
 \ac{SDL} wird zur Beschreibung von Telekommunikationssystemen, deren Abläufe, sowie für Protokoll Definitionen und in verteilten Systemen eingesetzt.
-Der Anwendungsbereich erstreckt sich über komplexe ereignisgesteuerte, interaktiven Echtzeitanwendungen, welche über Nachrichten miteinander kommunizieren. 
+Der Anwendungsbereich erstreckt sich über komplexe ereignisgesteuerte, interaktiven Echtzeitanwendungen, welche über Nachrichten (in \ac{SDL} signals) miteinander kommunizieren. 
 Der Hauptfokus von \ac{SDL} ist, sich einen genauen Überblick über das Verhalten genannter Systeme zu machen, wobei Eigenschaften mit anderen Techniken beschrieben werden müssen. 
-So wird \ac{MSC} unter anderem zum Beschreiben von Interaktionsverhalten zwischen Systemen, \ac{ASN1} für die Beschreibung von Datentypen und \ac{TTCN3} für Tests verwendet. In den letzten Überarbeitungen wurde die Spezifikation von \ac{SDL} um objekt-orientierte Aspekte erweitert und mit Sprachen wie \ac{UML} und \ac{ASN1} harmonisiert. \ac{SDL} kann entweder grafisch oder textuell beschrieben werden.
-
+So wird \ac{MSC} unter anderem zum Beschreiben von Interaktionsverhalten zwischen Systemen, \ac{ASN1} für die Beschreibung von Datentypen und \ac{TTCN3} für Tests verwendet. In den letzten Überarbeitungen wurde die Spezifikation von \ac{SDL} um objekt-orientierte Aspekte erweitert und mit Sprachen wie \ac{UML} und \ac{ASN1} harmonisiert. \ac{SDL} kann entweder grafisch oder textuell beschrieben werden. Beide Notationen sind semantisch äquivalent und lassen sich ineinander überführen.
+[thesis joos 45]
 
 \subsection{Architektur}
 \label{ssc:Architektur}
@@ -28,7 +28,7 @@ Seit \ac{SDL}-2000 werden alle Funktionsblöcke übergreifend als Agenten bezeic
 
 \subsection{Kommunikation}
 \label{ssc:Kommunikation}
-Die Kommunikation innerhalb von \ac{SDL} findet asynchron über Nachrichten oder mit diskreten Signalen über Kanäle statt. 
+Die Kommunikation innerhalb von \ac{SDL} findet asynchron über Nachrichten bzw. mit diskreten Signalen über Kanäle statt. 
 Diese können sowohl auf Systemebene, als auch auf Blockebene definiert werden.
 Jede Nachricht besitzt einen Namen, optionale Parameter und kann in eine Liste gruppiert werden. 
 Die Kanäle enthalten ebenfalls Namen und verbinden die einzelnen Agenten untereinander oder mit der Umgebung.
@@ -47,7 +47,7 @@ Wie in der Abbildung zu sehen ist...(Abbildung beschreiben)
 
 \subsection{Systemverhalten}
 \label{ssc:Verhalten}
-Das Verhalten von \ac{SDL} wird in Prozessen definiert, welche wie eben besprochen, mittels \ac{EFSM}s repräsentiert werden. Sie bestehen aus einer Menge an Zustandsübergängen, welche Beispielhaft in Abbildung \ref{fig:BspProzess} zu sehen sind. Darunter gehören Zustände wie [liste aufzählen]. Da eine Aufzählung dem Sinn der Arbeit nicht dienlich ist, wird in diesem Zusammenhang auf die Spezifikation verwiesen \cite{ITU18}.
+Das Verhalten von \ac{SDL} wird in Prozessen definiert, welche automatenbasiert und wie eben besprochen, mittels \ac{EFSM}s repräsentiert werden. Sie bestehen aus einer Menge an Zustandsübergängen, welche Beispielhaft in Abbildung \ref{fig:BspProzess} zu sehen sind. Darunter gehören Zustände wie [liste aufzählen]. Da eine Aufzählung dem Sinn der Arbeit nicht dienlich ist, wird in diesem Zusammenhang auf die Spezifikation verwiesen \cite{ITU18}.
 Ein Prozess besitzt einen Eingabepuffer zum Speichern von Nachrichten. Dieser Puffer übergibt nach dem \ac{FIFO}-Prinzip nacheinander die anstehenden Nachrichten des verbundenen Kanals an den Prozess. Kommen zwei Nachrichten von mehreren Kanälen gleichzeitig an einem Prozess an, so ist das Systemverhalten undefiniert und nach dem Zufall wird eine der beiden Nachrichten zuerst ausgeführt.
 Die Modellierung der Automaten richtet sich nach Mealy, wobei in diesem die Ausgabe von seinem Zustand und seiner Eingabe abhängt.
 Im Gegensatz zu Moore-Automaten enthält er keinen Startzustand, wobei jeder Mealy-Automat in einen Moore-Automat übertragen werden kann.
@@ -65,12 +65,9 @@ Im Gegensatz zu Moore-Automaten enthält er keinen Startzustand, wobei jeder Mea
 
 Wie in der Abbildung zu sehen ist...(Abbildung beschreiben)
 
-\subsection{Timer}
-
-\subsection{Daten}
+\subsection{Datenmodellierung}
 \label{ssc:Daten}
-In \ac{SDL} sind Daten auf zwei Arten beschrieben, einerseits mit dem \acs{ADT} oder mit \ac{ASN1}. \ac{ADT} definiert keine 
-Datenstrukturen, sondern jeweils einen Satz an Werten, Operation und Bedingungen. In \ac{ADT} sind einige Datentypen wie Boolean, Character, Charstring Integer und Real vordefiniert, nur um die gängigsten zu nennen. Eine Liste der vordefinierten Datentypen kann aus der Spezifikation entnommen werden [101/4 S.?]. Neue Datentypen lassen sich durch bereits vorhandene Datentypen definieren, hierzu sind Einschränkungen und ein Standardwert in der Definition mit anzugeben. Abbildung \ref{fig:KommModell} verdeutlicht dies in einem Beispiel. In jedem Agenten lassen sich Konstanten, basierend auf den gewählten Datentypen definieren. Sie müssen einen konstanten Wert enthalten und dürfen nicht verändert werden. Variablen können nur in Prozessen definiert werden, enthalten denselben Aufbau wie Konstanten und können nur in ihrem definierten Prozess geändert werden. Zwar sind keine globalen Variablen zulässig, jedoch können Prozess eigene Variablen anderen Prozessen sichtbar gemacht werden. Diese Variablen nennt man remote variables.
+In \ac{SDL} sind Daten auf zwei Arten beschrieben, einerseits mit dem \acs{ADT} oder mit \ac{ASN1}. \ac{ADT} definiert keine Datenstrukturen, sondern jeweils einen Satz an Werten, Operation und Bedingungen. In \ac{ADT} sind einige Datentypen wie Boolean, Character, Charstring Integer und Real vordefiniert, nur um die gängigsten zu nennen. Eine Liste der vordefinierten Datentypen kann aus der Spezifikation entnommen werden [101/4 S.?]. Neue Datentypen lassen sich durch bereits vorhandene Datentypen definieren, hierzu sind Einschränkungen und ein Standardwert in der Definition mit anzugeben. Abbildung \ref{fig:KommModell} verdeutlicht dies in einem Beispiel. In jedem Agenten lassen sich Konstanten, basierend auf den gewählten Datentypen definieren. Sie müssen einen konstanten Wert enthalten und dürfen nicht verändert werden. Variablen können nur in Prozessen definiert werden, enthalten denselben Aufbau wie Konstanten und können nur in ihrem definierten Prozess geändert werden. Zwar sind keine globalen Variablen zulässig, jedoch können Prozess eigene Variablen anderen Prozessen sichtbar gemacht werden. Diese Variablen nennt man remote variables.
 
 \subsection{Objektorientierung} 
 \label{ssc:Vererbung}
@@ -85,7 +82,7 @@ Die Eigenschaften der Sprachdefinition von \ac{SDL} sind folgend beschrieben[REC
 		
 		\item[Konkrete Grammatik] Die konkrete Syntax wird durch eine grafische Syntax, statischen Bedingungen und Regeln für die grafische Syntax beschrieben.
 		Beschrieben wird sie durch die erweiterte Backus-Naur Form. Wenn jedoch in der abstrakten Grammatik ein 
-		grafisches Metamodell verwendet wurde, ist es erlaubt dieses um kontrkete Eigenschaften zu erweitert und zu verwenden.
+		grafisches Metamodell verwendet wurde, ist es erlaubt dieses um konkrete Eigenschaften zu erweitert und zu verwenden.
 		
 		\item[Semantik] Die Semantik beschreibt ein Konstrukt,samt dessen Eigenschaften, Interpretation und dynamischen Bedingungen.
 		
@@ -94,7 +91,5 @@ Die Eigenschaften der Sprachdefinition von \ac{SDL} sind folgend beschrieben[REC
 
 \subsubsection{Metamodell}
 \label{ssc:Metamodell}
-Es werden Anstrengungen unternommen, jedoch existiert derzeit kein öffentlich zugängliches Metamodell von \ac{SDL}, welches alle 
-Aspekte der Sprache in sich vereinigt. So hat die \ac{ITU-T} selbst ein Meta-Metamodell auf Grundlage von 
-\ac{UML} zu erstellen, jedoch deckt diese Definition, welche auch SDL-UML genannt wird, nur Teile der Sprachdefinition von \ac{SDL} 
-ab.
+Es werden derzeit Anstrengungen unternommen ein öffentlich zugängliches Metamodell von \ac{SDL} zu erstellen, welches alle Aspekte der Sprache in sich vereinigt. Zu dem derzeitigen Standpunkt existiert keines oder ist nicht uns bekannt. Deswegen hat die \ac{ITU-T} selbst ein Meta-Metamodell auf Grundlage von 
+\ac{UML} erstellst, welches jedoch diese Definition nicht vollends abdeckt. Diese wird auch SDL-UML genannt und deckt nur Teile der Sprachdefinition ab.

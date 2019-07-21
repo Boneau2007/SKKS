@@ -1,18 +1,69 @@
 \section{Anwendungsbezogene Kriterien}
 \label{sc:AnwendungsbezogeneKriterien}
-Anwendungsbezogene Kriterien beschreiben die Nutzung von Modellierungssprachen aus Sicht des Anwenders idR. abhängig 
-von ihrem Domänenspezifischen Einsatz. So besitzen verschiedene Modellierungssprachen einen unterschiedlich großes 
-Nutzungspotenzial im jeweiligen Bereich. Man spricht in diesem Zusammenhang auch von der Mächtigkeit der Sprache. 
-Jedoch ist zu beachten, das Anwendungsbezogene Kriterien und Anwenderbezogene Kriterien konkurrieren können, 
-da sich beispielsweise eine leicht erlernbare Sprache sich negativ auf die Mächtigkeit auswirken könnte und umgekehrt.
+Anwendungsbezogene Kriterien beschreiben die Anforderungen einer Modellierungssprache innerhalb eines Domänenspezifischen Einsatzes.
+Dies hängt von den jeweiligen Aspekten ab, welche die Modellierungssprache abbilden soll.
+So besitzen verschiedene Modellierungssprachen unter anderem ein unterschiedlich großes Nutzungspotenzial in der jeweiligen Anwendungsdomäne.
+Man spricht in diesem Zusammenhang auch von der Mächtigkeit der Sprache.
+Dabei ist zu beachten, das Anwendungs- und Anwenderbezogene Kriterien oft konkurrierend sein können,
+so kann sich beispielsweise eine leicht erlernbare Sprache sich negativ auf die Mächtigkeit auswirken und umgekehrt.
+Anwendungsbezogene Kriterien können in Anforderungen wie der Zielsetzung, der Mächtigkeit, der Operationalisierbarkeit,
+dem Abstraktionsniveau, dem Detaillierungsgrad und dem Formalisierungsgrad beschrieben werden.
+Zwar gibt es höchstwahrscheinlich noch eine weit aus größere Anzahl an Kriterien, diese sollen uns aber in dieser Arbeit genügen.  
+[Ein Konzept zur Simulation wissensintensiver Aktivitäten in Geschäftsprozessen 95F]
 
-\subsection{Nutzungspotenzial}
+\subsection{Zielsetzung}
+\label{ssc:Dokumentation}
+Die Zielsetzung beschreibt den wesentlichen Zweck mit dem eine Modellierungssprache für eine Anwendungsdomäne einer Modellierungssprache wird vornehmlich in dessen Dokumentation erläutert. In ihr wird der wesentliche Zweck der Sprache beschrieben.
+
+Ist die Dokumetation Vollständig? Und warum ist die Vollständigkeit wichtig?
+Hat die Dokumentation einen einfach zu versehenden Aufbau
+Ist die Dokumentation Verständlich geschrieben.
+Sind die Dokumente Aktuell?
+
+\subsection{Mächtigkeit}
 \label{ssc:Nutzungspotenzial}
-Das Nutzungspotenzial gibt Aussagen darüber, wie gut die verwendete Sprache Eigenschaften in einem darzustellenden Sachverhalt
-beschreibt. Darunter fällt wie Präzise diese Aussagen sind und wie hoch der Detailgrad der darzustellenden Eigenschaft ist. 
-Je größer dieser Sprachumfang ist, desto größer ist auch die Mächtigkeit der Sprache. Nun ist es schwierig eine Aussage darüber 
-zu treffen, inwiefern eine Sprache für eine Anwendungsdomäne, wie der von Telekommunikationsprozessen, eine vollständige
-Beschreibung der Konzepte stellt.
+Die Mächtigkeit ist ein maß des Nutzungspotenzials einer Sprache und gibt Aussage darüber,
+in wie weit und wie gut die Konzepte der verwendeten Sprache, die Eigenschaften eines Sachverhalt der Domäne darstellen kann.
+Darunter fällt wie Präzise diese Aussagen sind und wie hoch der Detailgrad der darzustellenden Eigenschaft ist werden [Allweyer 2005b, S.180].
+Der Sprachumfang korreliert mit der Mächtigkeit der Sprache. Je größer dieser Umfang ist, desto größer ist auch die Mächtigkeit der Sprache.
+Da es für den Anwender von großer Bedeutung ist, seine Anwendung mit einem möglichst umfänglichen Detailgrad beschreiben zu können,
+muss die Mächtigkeit mindestens alle Aspekte enthalten, die für den gewünschten darzustellenden Sachverhalt notwendig sind.
+Eine Mächtigkeit der Sprache, die sich über den Anwendungszweck der Domäne bezieht, kann wie schon erwähnt sich negativ auf andere Kriterien auswirken.
+Da alle Modellierungssprachen formale Sprachen sind, kann man die Mächtigkeit ihrer Sprache anhand ihrer Grammatik-Typen festlegen.
+
+\subsection{Operationalisierbarkeit}
+\label{ssc:Operationalisierbarkeit}
+Die Operationalisierbarkeit gibt Aussage darüber, ob und wie gut sich die Modellierungssprache über ihre eigene Verwendung hinaus noch weiter verwenden lässt.
+Darunter fällt die Transformation des Modells in andere Sprachen als auch das darstellen von diversen Sachverhalten.
+Bei der Transformation ist hierbei zu beachten, dass die verwendeten Konzepte beider Sprachen möglichst gleich sein müssen,
+um eine annähernd vollständige Konvertierung zu ermöglichen. Zur Abbildung diverser Sachverhalte enthält eine gute Operationalisierbarkeit die Abbildungsmöglichkeit von Funktionen, Bedingungen, Ressourcen, Objekten und Ereignissen.
+Deswegen müssen Konzepte zur Planung und Analyse des domänenspezifischen Einsatzes enthalten sein.
+[IT-Landschaften 25]
+
+\subsection{Abstraktionsniveau}
+\label{ssc:Abstraktionsniveau}
+Die Abstraktionsfähigkeit einer Modellierungssprache beschreibt ein Kriterium, worin die Fachterminologie der Domäne sich mit den Konzepten der Modellierungssprache möglichst decken sollte. In dem Bereich von Kommunikationsabläufen der Telekommunikation sind diese Begriffe eher technischer Natur und kommen aus einem Informatik-spezifischem Umfeld, welcher Fachsprache auf dem Niveau von Spezialisten voraussetzt. 
+
+\subsection{Detailgrad}
+\label{ssc:Detailgrad}
+Der Detailgrad beurteilt die Abbildung einzelner Details im Modell des Anwendungsbereichs. Dabei handelt es sich um Objekte des Anwendungsbereichs, sowie der Möglichkeit eigene Objekte zu definieren.
+
+
+Daneben sollten die
+Konstrukte der Sprache eine angemessene Detaillierung ermöglichen. Im Falle des
+betrachteten Anwendungszwecks sollte somit eine detaillierte Modellierung von
+fachlichen Modellen, mit ihren Abläufen und unterstützenden Daten und Informationen
+möglich sein. Eine genaue Umsetzung der Informationssysteme, welche die in den
+Systemen ablaufenden technischen Prozesse in einem hohen Formalisierungsgrad
+betrachten, ist jedoch nicht Gegenstand der Betrachtungsweise, da sie wiederum
+Konzepte erfordern, die für die Zielgruppe der Modelle nicht angemessen und
+verständlich sind. Daher sollte die Modellierungssprache auf derartige Konzepte
+verzichten, denn eine formale Beschreibung der Prozesse ist für den menschlichen
+Betrachter, auf dem das Augenmerk liegt, nicht erforderlich.
 
 \subsection{Funktionalität}
 \label{ssc:Funktionalität}
+Anforderungen
+Anpassung
+Flexibilität
+
