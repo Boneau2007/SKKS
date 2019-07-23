@@ -20,6 +20,25 @@ Hat die Dokumentation einen einfach zu versehenden Aufbau
 Ist die Dokumentation Verständlich geschrieben.
 Sind die Dokumente Aktuell?
 
+
+\subsection{Angemessenheit}
+Das Kriterium der Angemessenheit steht in direktem Zusammenhang mit der Mächtigkeit und dem
+Anwendungszweck einer Sprache. Die Angemessenheit ist immer relativ zum Anwendungszweck zu
+sehen. Sie bezieht sich sowohl auf die Sprache in ihrer Gesamtheit als auch auf die einzelnen Sprachkonzepte.
+Angemessenheit und Mächtigkeit bieten zusammen die Möglichkeit, zu untersuchen, ob
+eine Sprache für den Anwendungszweck ausreichende Konzepte bereitstellt, gleichzeitig aber keine
+überflüssigen Konzepte enthält.
+\subsubsection{Konsequenzen für Modellierungssprachen}
+Insbesondere bei sehr speziellen Sprachkonstrukten muß untersucht werden, ob diese Konstrukte nötig
+sind oder ob sie nur zu einer Erhöhung der Sprachkomplexität führen. Die Entscheidung, ob ein
+Sprachmittel angemessen ist oder nicht, ist jedoch häufig nicht objektiv vornehmbar, sondern hängt
+stark von den Präferenzen der jeweiligen Betrachter ab. Im allgemeinen gibt es immer Vor- und Nachteile
+für einzelne Sprachmittel, so dass ein sorgsames Abwägen notwendig ist.
+\subsubsection{Feststellbarkeit/Meßbarkeit der Beurteilungskriterien} 
+Generelle formale Maße zur Bestimmung der Angemessenheit von Modellierungssprachen gibt es
+nicht. Die Untersuchung der Angemessenheit eines Sprachelementes kann daher nur subjektiv erfolgen.
+Dabei ist zu untersuchen, ob ein Sprachelement bedeutsam für den Anwendungszweck ist oder
+nicht.
 \subsection{Mächtigkeit}
 \label{ssc:Nutzungspotenzial}
 Die Mächtigkeit ist ein maß des Nutzungspotenzials einer Sprache und gibt Aussage darüber,
@@ -29,7 +48,22 @@ Der Sprachumfang korreliert mit der Mächtigkeit der Sprache. Je größer dieser
 Da es für den Anwender von großer Bedeutung ist, seine Anwendung mit einem möglichst umfänglichen Detailgrad beschreiben zu können,
 muss die Mächtigkeit mindestens alle Aspekte enthalten, die für den gewünschten darzustellenden Sachverhalt notwendig sind.
 Eine Mächtigkeit der Sprache, die sich über den Anwendungszweck der Domäne bezieht, kann wie schon erwähnt sich negativ auf andere Kriterien auswirken.
-Da alle Modellierungssprachen formale Sprachen sind, kann man die Mächtigkeit ihrer Sprache anhand ihrer Grammatik-Typen festlegen.
+Da alle Modellierungssprachen formale Sprachen sind, kann man die Mächtigkeit ihrer Sprache anhand ihrer Grammatik-Typen festlegen. \\
+Eine Modellierungssprache sollte sich auf die Modellierung konzentrieren.
+So können zu viele Konzepte zu einer unangemessen mächtigen Sprache führen. Zwischen Mächtigkeit
+und Angemessenheit muss daher ein ausgewogenes Verhältnis existieren.\\
+Mächtigkeit kann aber auch relativ zur Mächtigkeit von Turingmaschinen betrachtet werden und ist
+dann ein Maß für die Berechnungsfähigkeit einer Modellierungssprache. Für Modellierungssprachen
+ist diese Betrachtung jedoch nicht ganz korrekt, da sie im allgemeinen keine Formalisierungen von
+Algorithmen sind.
+\subsubsection{Konsequenzen}
+Mächtigkeit und Angemessenheit bedingen einander. Die Mächtigkeit einer Sprache muss daher relativ
+zum Anwendungsbereich betrachtet werden. Geht man grundsätzlich davon aus, dass die hier betrachteten
+Modellierungssprachen der konzeptuellen Modellierung dienen, misst sich die Mächtigkeit einerseits
+an der Möglichkeit, als wesentlich erkannte Sachverhalte des abzubildenden Realitätsbereichs
+natürlich, also ohne aufwendige Rekonstruktionen, beschreiben zu können. Andererseits sollte die
+Modellierungssprache auch Möglichkeiten bieten, Informationen darzustellen, die für die Implementierung
+benötigt werden.
 
 \subsection{Operationalisierbarkeit}
 \label{ssc:Operationalisierbarkeit}
