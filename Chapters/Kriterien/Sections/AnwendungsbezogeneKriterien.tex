@@ -39,6 +39,74 @@ Generelle formale Maße zur Bestimmung der Angemessenheit von Modellierungssprac
 nicht. Die Untersuchung der Angemessenheit eines Sprachelementes kann daher nur subjektiv erfolgen.
 Dabei ist zu untersuchen, ob ein Sprachelement bedeutsam für den Anwendungszweck ist oder
 nicht.
+
+\subsection{Überprüfbarkeit}
+Modelle dienen der Abbildung faktischer oder geplanter Realität. Solche Abbildungen können grundsätzlich
+fehlbar sein. Ein Modell sollte seine Überprüfung an der Realität unterstützen. Der Einfluss der
+Modellierungssprache auf die Überprüfbarkeit eines Modells ist ambivalent. So geht es einerseits
+darum, eine möglichst genaue, intersubjektiv nachvollziehbare Überprüfung an der Wirklichkeit anzustreben.
+Andererseits ist zu berücksichtigen, dass solche objektivierten Verfahren nicht für alle Facetten
+eines Modells anwendbar sind und sich Modelle oft nicht auf faktische, sondern geplante Realität
+beziehen. In diesen Fällen erfolgt die Überprüfung allein durch die Einschätzung der Betrachter. Idealtypisch
+ist ein Modell dann als realistisch (im Hinblick auf Erwartungen) anzusehen, wenn im Kreise
+gutwilliger und sachkundiger Betrachter ein Konsens darüber erzielt wurde. Während die objektivierte
+Überprüfung eines Modells an der Realität tendenziell zur Forderung nach formalen Modellierungssprachen
+führt, ergeben sich aus dem Bemühen um Konsensbildung andere Konsequenzen: Bekanntlich
+fördert Mehrdeutigkeit die Chance, einen Konsens zu erzielen. Ein Modellierungsansatz wie die
+"Soft System Methodology" ([Che81]) lässt den Betrachtern eben wesentlich mehr individuelle Interpretationsspielräume
+als eine Sprache zur formalen Systemspezifikation. Wegen dieser widersprüchlichen
+Konsequenzen ist das Kriterium "Überprüfbarkeit" nicht zur Diskriminierung zwischen Modellierungssprachen
+geeignet.\\
+Ein Modell ist eine vereinfachte und idealisierte Abbildung eines Problembereichs. Im Modell werden
+nur die für die Betrachtung wesentlichen Eigenschaften berücksichtigt und unwesentliche vernachlässigt.
+In Abb.  ist die Beziehung zwischen Modell und zu modellierendem Sachverhalt dargestellt.\cite{MT010}
+\begin{center}
+	\begin{figure}[h]
+		
+		
+		\includegraphics[scale=1]{Graphics/Sachverhalt.jpg}
+		
+		\captionof{figure}{Beziehung zwischen Modell und zu modellierendem Sachverhalt }
+		
+		
+		Quelle : \cite{MT010}
+		
+		
+		
+		\label{fig9}
+		
+		
+	\end{figure}
+	
+\end{center}
+
+Modelle bedürfen immer der Überprüfung mit dem zu modellierenden Sachverhalt. Zwischen Sachverhalt
+und Modell existiert immer eine Beziehung, die ein Maß für die Angemessenheit des Modells ist.
+Die Bewertung der Angemessenheit eines Modells kann nur relativ zum Modellierungszweck erfolgen,
+da Modelle von unwesentlichen Details abstrahieren. Im allgemeinen kann diese Beziehung nicht
+direkt angeben werden, da der Sachverhalt meistens nur unklar spezifiziert ist1. Aus diesem Grund ist
+es auch nicht möglich, immer automatisch zu überprüfen, ob ein Modell den gewünschten Sachverhalt
+modelliert. Nur wenn der Sachverhalt selbst als exakte Beschreibung2 vorliegt und auch das Modell
+exakt beschrieben ist, wird ein formales Überprüfen erst möglich, und die Angemessenheit eines
+Modells kann formal bewertet werden. Meistens ist der Sachverhalt jedoch nicht klar spezifiziert.\\
+Die einzige Möglichkeit ist dann, den Inhalt des Modells zu erfassen und zu überprüfen, ob dieser mit
+dem zu modellierenden Sachverhalt übereinstimmt. Je exakter und präziser ein Modell interpretiert
+werden kann, desto leichter kann es mit dem zu modellierenden Sachverhalt verglichen werden.
+Obwohl es nicht möglich ist, die Adäquanz zwischen einer eventuell unpräzisen Darstellung (Sachverhalt)
+und einer möglichst präzisen Darstellung (Modell) prinzipiell zu entscheiden, hilft eine präzise
+Darstellung und eindeutige Interpretation des Modells beim Vergleich mit dem zu modellierenden
+Sachverhalt. Eine Modellierungssprache, die es ermöglicht, Modelle exakt und eindeutig zu beschreiben
+und zu interpretieren, erleichtert daher wesentlich die Überprüfung des Modells.\\
+Nur wenn Modelle eindeutig sind, ist eine korrekte Verständigung möglich. Dies verlangt eine eindeutige
+Interpretation der einzelnen Sprachmittel und Regeln zur syntaktischen Verknüpfung dieser
+Sprachmittel. Andernfalls bieten sich Interpretationsfreiräume, die zu Missverständnissen führen können.
+Die exakte Festlegung der abstrakten Syntax und Semantik der Sprache ist somit Voraussetzung
+für die eindeutige Interpretierbarkeit der Modelle. Beim Betrachten eines Artefakts der Modellierungssprache
+hat man im allgemeinen nicht wie bei Programmen die Möglichkeit, durch Inspizieren oder
+Ausprobieren des Codes die Aufgabe der Software herauszubekommen. Vielmehr ist die Beschreibung
+der Metasprache die einzige Referenz.\\
+Ein anderer Aspekt der Überprüfung betrifft die Nachvollziehbarkeit und Rückverfolgung von Modellierungsentscheidungen.\\\cite{MT010}
+
 \subsection{Mächtigkeit}
 \label{ssc:Nutzungspotenzial}
 Die Mächtigkeit ist ein maß des Nutzungspotenzials einer Sprache und gibt Aussage darüber,
