@@ -12,11 +12,16 @@ Die Standardisierung, Pflege und Weiterentwicklung der Sprache wurde an die OMG
 gearbeitet, die im Jahr 2006 vollständig fertig gestellt und Anfang 2009 von der leicht
 überarbeiteten Version 2.2 abgelöst wurde. Eine Standardisierung durch die International
 Standardization Organization (ISO) hat die Version 2.2 allerdings noch nicht erreicht. Diese
+<<<<<<< HEAD
+bleibt bisher nur der Version 1.4.2 vorbehalten.
+\cite{MT005}
+=======
 bleibt bisher nur der Version 1.4.2 vorbehalten \cite{MT001}.
+>>>>>>> b85b6cf87ace722198597cb349067049505ae5e0
 \subsection{Metamodell} 
 UML legt Spracheinheiten fest, die auf verschiedenen Ebenen agieren. Mit diesen drücken Sie die Struktur und das Verhalten eines Systems aus. Einige Elemente nutzt die Modellierungssprache, um sich selbst zu definieren. Die Meta-Modellierung umfasst alle Elemente von UML, auch solche, die UML selbst beschreiben. Dafür nutzt es vier hierarchisch angeordnete Ebenen (M0 bis M3).
 
-Die Meta-Metaebene M3 spezifiziert die Metadaten der Modellierungssprache und deren Zusammenhänge mithilfe der Meta Object Facility (MOF). Sie definiert das Metamodell. Zudem befähigt Sie den Metadaten-Transfer. Das von der OMG definierte Format XMI ist ein praktisches Tool, um objektorientierte Daten auf Meta-Metaebene zwischen Entwicklungstools zu teilen. Die Object Constraint Language (OCL), eine deklarative Programmiersprache, ergänzt UML und reguliert Randbedingungen der jeweiligen Modellierung. Als Textsprache wirkt sie jedoch nur unterstützend, statt selbst für Modellierung zur Verfügung zu stehen.\\
+Die Meta-Metaebene M3 spezifiziert die Metadaten der Modellierungssprache und deren Zusammenhänge mithilfe der Meta Object Facility (MOF). Sie definiert das Metamodell. Zudem befähigt Sie den Metadaten-Transfer. Das von der OMG definierte Format XMI ist ein praktisches Tool, um objektorientierte Daten auf Meta-Metaebene zwischen Entwicklungstools zu teilen. Die Object Constraint Language (OCL), eine deklarative Programmiersprache, ergänzt UML und reguliert Randbedingungen der jeweiligen Modellierung. Als Textsprache wirkt sie jedoch nur unterstützend, statt selbst für Modellierung zur Verfügung zu stehen.\cite{MT011}\\
 
 \begin{center}
 \begin{figure}[h]
@@ -40,7 +45,7 @@ Die obere Grafik zeigt die Metamodellierung von UML 2.0. Ebene M0 ist die grundl
 Wollen Sie ein verständliches UML-Diagramm erstellen, müssen Sie das Metamodell UML mit seinen Regeln kennen. Die höchste Ebene, M3, ist ein Metamodell des Metamodells. Die erwähnte Meta Object Facility arbeitet auf einer abstrakten Ebene, die Metamodelle definiert. Diese Ebene definiert sich selbst, da sonst weitere, übergeordnete Meta-Ebenen entstünden.\\
 
 \subsection{Kurzbeschreibung}
-Bei der Unified Modeling Language (UML) handelt es sich nicht um eine bestimmte Methode, sondern vielmehr um einen Sammelbegriff für grafische Methoden der objektorientierten Entwicklung und Dokumentation von Software (Object Oriented Design – OOD). Dies umfasst Methoden und Notationen für Planung, Design, Entwurf und Implementierung von Software, die seit den 90er Jahren durch die Object Management Group (die auch BPMN pflegt) zu einem offiziellen Standard, der UML, zusammengeführt wurden.\\
+Bei der Unified Modeling Language (UML) handelt es sich nicht um eine bestimmte Methode, sondern vielmehr um einen Sammelbegriff für grafische Methoden der objektorientierten Entwicklung und Dokumentation von Software (Object Oriented Design – OOD). Dies umfasst Methoden und Notationen für Planung, Design, Entwurf und Implementierung von Software, die seit den 90er Jahren durch die Object Management Group (die auch BPMN pflegt) zu einem offiziellen Standard, der UML, zusammengeführt wurden.\cite{MT005} \\
 Im Gegensatz zu anderen Methoden, die primär auf die Modellierung von Prozessen abzielen, kann die UML direkt zur Software-Entwicklung genutzt werden.\\
 Die objektorientierte Sichtweise, auf der UML basiert, zieht ausgehend von der realen Welt Objekte heraus, die mit Attributen beschrieben werden. Die Objekte werden zu Klassen verdichtet, wenn Eigenschaften und Verhalten der Objekte identisch oder ähnlich sind. Klassen können daher als Baupläne für die zu erzeugenden Objekte (die Instanzen einer Klasse) interpretiert werden. Die Objekte, Klassen, Attribute und Methoden bilden die Basis für sämtliche Diagrammtypen der UML. Die verschiedenen Diagrammtypen können in\\
 
@@ -78,7 +83,7 @@ Das Anwendungsfalldiagramm (use case diagram) dient im Rahmen der Softwareentwic
 
 
 
-Quelle : DVZ datenverarbeitungszentrum mecklenburg-vorpommern gmbh
+Quelle : \cite{MT005}
 
 \label{fig2}
 
@@ -86,7 +91,7 @@ Quelle : DVZ datenverarbeitungszentrum mecklenburg-vorpommern gmbh
 \end{figure}
 \end{center}
 \newpage
-Anwendungsfalldiagramme weisen jedoch den Nachteil auf, dass keine Reihenfolge bei der Bearbeitung der Anwendungsfälle abgebildet werden kann. Es wird somit nicht deutlich, welcher Anwendungsfall vor einem anderen durchgeführt werden muss. Allerdings kann diese Reihenfolge beispielsweise durch andere Methoden der UML, wie das Aktivitätsdiagramm, kompensiert werden. Zudem muss jeder Anwendungsfall anhand einer Beschreibung dokumentiert werden. Hierbei bestehen jedoch keine Vorgaben, weshalb sich Inkonsistenzen und Redundanzen ergeben können. Darüber hinaus kann nicht sichergestellt werden, dass Dritte die Dokumentation auch verstehen. Daher sollte auf Vorlagen, die nicht offiziell zum Standard der UML gehören, zurückgegriffen werden.\\
+Anwendungsfalldiagramme weisen jedoch den Nachteil auf, dass keine Reihenfolge bei der Bearbeitung der Anwendungsfälle abgebildet werden kann. Es wird somit nicht deutlich, welcher Anwendungsfall vor einem anderen durchgeführt werden muss. Allerdings kann diese Reihenfolge beispielsweise durch andere Methoden der UML, wie das Aktivitätsdiagramm, kompensiert werden. Zudem muss jeder Anwendungsfall anhand einer Beschreibung dokumentiert werden. Hierbei bestehen jedoch keine Vorgaben, weshalb sich Inkonsistenzen und Redundanzen ergeben können. Darüber hinaus kann nicht sichergestellt werden, dass Dritte die Dokumentation auch verstehen. Daher sollte auf Vorlagen, die nicht offiziell zum Standard der UML gehören, zurückgegriffen werden.\cite{MT005} \\
 \\
 \newpage
 Das Klassendiagramm (Class Diagram) eignet sich zur Darstellung von Klassenstrukturen innerhalb eines IKS. Klassendiagramme können nicht direkt für die Geschäftsprozessmodellierung verwendet werden. Stattdessen handelt es sich eine statische Darstellung von Klassen, Objekten und deren Beziehungen untereinander. Klassendiagramme beschreiben jedoch nur, dass eine Interaktion besteht; wie diese ausgestaltet ist kann jedoch nicht dargestellt werden.\\
@@ -99,7 +104,7 @@ Das Klassendiagramm (Class Diagram) eignet sich zur Darstellung von Klassenstruk
 
 
 
-Quelle : DVZ datenverarbeitungszentrum mecklenburg-vorpommern gmbh
+Quelle : \cite{MT005}
 
 \label{fig3}
 
@@ -118,7 +123,7 @@ Das Aktivitätsdiagramm oder auch Ablaufdiagramm (Activity Diagram) wird zur Dar
 
 
 
-Quelle : DVZ datenverarbeitungszentrum mecklenburg-vorpommern gmbh
+Quelle : \cite{MT005}
 
 \label{fig4}
 
@@ -128,7 +133,7 @@ Quelle : DVZ datenverarbeitungszentrum mecklenburg-vorpommern gmbh
 
 \newpage
 \subsection{UML-Diagramme: Eine Übersicht}
-Die folgende Übersicht zeigt übergeordnete Kategorien und Anwendungsmöglichkeiten der einzelnen Diagrammtypen in Kurzform. Wenn Sie ein modellorientiertes Software-System, einen Anwendungsfall in der Wirtschaft o. Ä. visuell darstellen wollen, sollten Sie laut Empfehlung der UML-Task-Force vorher einen der UML-Diagrammtypen wählen. Erst dann lohnt es sich, eines der vielen UML-Tools zu wählen, da diese häufig eine gewisse Methode vorschreiben. Dann erstellen Sie das UML-Diagramm.\\
+Die folgende Übersicht zeigt übergeordnete Kategorien und Anwendungsmöglichkeiten der einzelnen Diagrammtypen in Kurzform. Wenn Sie ein modellorientiertes Software-System, einen Anwendungsfall in der Wirtschaft o. Ä. visuell darstellen wollen, sollten Sie laut Empfehlung der UML-Task-Force vorher einen der UML-Diagrammtypen wählen. Erst dann lohnt es sich, eines der vielen UML-Tools zu wählen, da diese häufig eine gewisse Methode vorschreiben. Dann erstellen Sie das UML-Diagramm.\cite{MT011} \\
 \begin{center}
 \begin{figure}[h]
    
@@ -151,12 +156,12 @@ UML ist heute eine der dominierenden Sprachen für die Modellierung von betriebl
 \begin{figure}[h]
    
 
-\includegraphics[scale=0.8]{Graphics/vornach.jpg}
-\includegraphics[scale=0.8]{Graphics/vornach2.jpg} 
+\includegraphics[scale=1]{Graphics/vornach.jpg}
+\includegraphics[scale=1]{Graphics/vornach2.jpg} 
 \captionof{figure}{UML: Vor- und Nachteile }
 
 
-Quelle : DVZ datenverarbeitungszentrum mecklenburg-vorpommern gmbh 
+Quelle : \cite{MT005} 
 
  
 \label{fig6}
