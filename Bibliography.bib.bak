@@ -65,7 +65,6 @@
   title       = {Specification and Description Language – Basic SDL–2010},
   institution = {TELECOMMUNICATION STANDARDIZATION SECTOR OF ITU},
   year        = {2016},
-  type        = {techreport},
   month       = apr,
   url         = {https://www.itu.int/rec/T-REC-Z.100},
 }

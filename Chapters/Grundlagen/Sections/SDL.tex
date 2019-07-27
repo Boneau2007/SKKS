@@ -13,17 +13,17 @@ So wird \ac{MSC} unter anderem zum Beschreiben von Interaktionsverhalten zwische
 \subsection{Architektur}
 \label{ssc:Architektur}
 Die \ac{SDL}-Spezifikation beschreibt ein hierarchisches System und erlaubt die strukturierte Trennung in Diagramme und Pakete und somit ein aufteilen eines Systems in viele kleinere Teilsysteme. Dies wirkt sich positiv auf die Entwicklung eines Systems in größeren Gruppen aus und vereinfacht diese. Ein System ist eine Menge an Blöcken, welche über Kanäle miteinander und der Umgebung außerhalb des Systems verbunden sind. Ein Kanal besitzt die Namen der Nachrichten bzw. Signale, welche über ihn übertragen werden können. Blöcke können Mengen von weiteren Blöcken enthalten oder  als Prozess verfeinert dargestellt werden. Ebenso können Prozesse eine Menge von Prozessen in sich definiert haben.
-Ein Prozess ist auf der untersten hierarchischen Ebene und beschreibt das dynamische Systemverhalten. Dies wird durch endliche Automaten, den \ac{EFSM} um genauer zu sein, beschrieben. Diese besitzen abstrakte Datentypen und Merkmale von Objektorientierung. Diese Strukturhierarchie wird anhand folgender Abbildung \ref{fig:ArchModell} veranschaulicht.
+Ein Prozess ist auf der untersten hierarchischen Ebene und beschreibt das dynamische Systemverhalten. Dies wird durch endliche Automaten, den \ac{EFSM} um genauer zu sein, beschrieben. Diese besitzen abstrakte Datentypen und Merkmale von Objektorientierung. Diese Strukturhierarchie wird anhand folgender Abbildung \ref{fig:Agenten} veranschaulicht.
  
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{test.png}
-	\caption{SDL-Architekturhierarchie}
-	\label{fig:ArchModell}
+	\includegraphics[width=1\textwidth]{Graphics/Agenten.pdf}
+	\caption{SDL Architekturhierarchie}
+	\label{fig:Agenten}
 \end{figure}
 
 \subsubsection{Agenten}
-Seit \ac{SDL}-2000 werden alle Funktionsblöcke übergreifend als Agenten bezeichnet. Der System-Agent, ist ein speziell ausgezeichneter Block-Agent. Er beinhaltet weitere Block-Agenten und definiert die Nachrichten mit denen über die Umgebung kommuniziert wird. Block- und Prozess-Agenten unterscheiden sich in über die Kontrolle ihrer Ausführungsart. Wo die Zustandsmaschinen von Block-Agenten nebenläufig ablaufen können, müssen Prozess-Agenten auf den Abschluss der in Ausführung befindlichen Transaktion warten um ihren Zustand wechseln zu können.
+Seit \ac{SDL}-2000 werden alle Funktionsblöcke übergreifend als Agenten bezeichnet. Der System-Agent, ist ein speziell ausgezeichneter Block-Agent. Er beinhaltet weitere Block-Agenten und definiert die Nachrichten mit denen über die Umgebung kommuniziert wird. Block- und Prozess-Agenten unterscheiden sich in über die Kontrolle ihrer Ausführungsart. Wo die Zustandsmaschinen von Block-Agenten nebenläufig ablaufen können, müssen Prozess-Agenten auf den Abschluss der in Ausführung befindlichen Transaktion warten um ihren Zustand wechseln zu können \cite[3]{ITUT100_2016}.
 
 
 \subsection{Kommunikation}
@@ -47,27 +47,23 @@ Wie in der Abbildung zu sehen ist...(Abbildung beschreiben)
 
 \subsection{Systemverhalten}
 \label{ssc:Verhalten}
-Das Verhalten von \ac{SDL} wird in Prozessen definiert, welche automatenbasiert und wie eben besprochen, mittels \ac{EFSM}s repräsentiert werden. Sie bestehen aus einer Menge an Zustandsübergängen, welche Beispielhaft in Abbildung \ref{fig:BspProzess} zu sehen sind. Darunter gehören Zustände wie [liste aufzählen]. Da eine Aufzählung dem Sinn der Arbeit nicht dienlich ist, wird in diesem Zusammenhang auf die Spezifikation verwiesen \cite{ITU18}.
+Das Verhalten von \ac{SDL} wird in Prozessen definiert, welche automatenbasiert und wie eben besprochen, mittels \ac{EFSM}s repräsentiert werden. Sie bestehen aus einer Menge an Zustandsübergängen, welche Beispielhaft in Abbildung \ref{fig:Basiskonstrukte} zu sehen sind. Darunter gehören Zustände wie Start, Bedingung, Eingabe und Ausgabe. Da eine Aufzählung dem Sinn der Arbeit nicht dienlich ist, wird in diesem Zusammenhang auf die Spezifikation verwiesen \cite[44]{ITUT101_2016}.
 Ein Prozess besitzt einen Eingabepuffer zum Speichern von Nachrichten. Dieser Puffer übergibt nach dem \ac{FIFO}-Prinzip nacheinander die anstehenden Nachrichten des verbundenen Kanals an den Prozess. Kommen zwei Nachrichten von mehreren Kanälen gleichzeitig an einem Prozess an, so ist das Systemverhalten undefiniert und nach dem Zufall wird eine der beiden Nachrichten zuerst ausgeführt.
 Die Modellierung der Automaten richtet sich nach Mealy, wobei in diesem die Ausgabe von seinem Zustand und seiner Eingabe abhängt.
 Im Gegensatz zu Moore-Automaten enthält er keinen Startzustand, wobei jeder Mealy-Automat in einen Moore-Automat übertragen werden kann.
 
 
-\subsubsection{Zustände}
-\label{sssc:Verhalten}
-
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{test.png}
-	\caption{Beispiel Prozess}
-	\label{fig:BspProzess}
-\end{figure}
+	\includegraphics[width=0.5\textwidth]{Graphics/Basiskonstrukte.pdf}
+	\caption{SDL-Basiskonstrukte}
+	\label{fig:Basiskonstrukte}
+\end{figure}v
 
-Wie in der Abbildung zu sehen ist...(Abbildung beschreiben)
 
 \subsection{Datenmodellierung}
 \label{ssc:Daten}
-In \ac{SDL} sind Daten auf zwei Arten beschrieben, einerseits mit dem \acs{ADT} oder mit \ac{ASN1}. \ac{ADT} definiert keine Datenstrukturen, sondern jeweils einen Satz an Werten, Operation und Bedingungen. In \ac{ADT} sind einige Datentypen wie Boolean, Character, Charstring Integer und Real vordefiniert, nur um die gängigsten zu nennen. Eine Liste der vordefinierten Datentypen kann aus der Spezifikation entnommen werden [101/4 S.?]. Neue Datentypen lassen sich durch bereits vorhandene Datentypen definieren, hierzu sind Einschränkungen und ein Standardwert in der Definition mit anzugeben. Abbildung \ref{fig:KommModell} verdeutlicht dies in einem Beispiel. In jedem Agenten lassen sich Konstanten, basierend auf den gewählten Datentypen definieren. Sie müssen einen konstanten Wert enthalten und dürfen nicht verändert werden. Variablen können nur in Prozessen definiert werden, enthalten denselben Aufbau wie Konstanten und können nur in ihrem definierten Prozess geändert werden. Zwar sind keine globalen Variablen zulässig, jedoch können Prozess eigene Variablen anderen Prozessen sichtbar gemacht werden. Diese Variablen nennt man remote variables.
+In \ac{SDL} sind Daten auf zwei Arten beschrieben, einerseits mit dem \acs{ADT} oder mit \ac{ASN1}. \ac{ADT} definiert keine Datenstrukturen, sondern jeweils einen Satz (sogenannte sorts) an Werten, Operation und Bedingungen [\cite[67]{ITUT104_2016}]. In \ac{ADT} sind einige Datentypen wie Boolean, Character, Charstring Integer und Real vordefiniert, aber auch Array und Enum. Eine Liste der vordefinierten Datentypen kann aus der Spezifikation entnommen werden [ITUT104 S.47FF]. Neue Datentypen lassen sich durch bereits vorhandene Datentypen definieren, hierzu sind Einschränkungen und ein Standardwert in der Definition mit anzugeben. Abbildung \ref{fig:KommModell} verdeutlicht dies in einem Beispiel. In jedem Agenten lassen sich Konstanten, basierend auf den gewählten Datentypen definieren. Sie müssen einen konstanten Wert enthalten und dürfen nicht verändert werden. Variablen können nur in Prozessen definiert werden, enthalten denselben Aufbau wie Konstanten und können nur in ihrem definierten Prozess geändert werden. Zwar sind keine globalen Variablen zulässig, jedoch können Prozess eigene Variablen anderen Prozessen sichtbar gemacht werden. Diese Variablen nennt man remote variables.
 
 \subsection{Objektorientierung} 
 \label{ssc:Vererbung}
