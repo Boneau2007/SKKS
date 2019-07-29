@@ -6,10 +6,23 @@ Es schließt die Lücke zwischen Spezifikation und Implementierung, da sie Model
 
 formale Sprachen generell haben: Die Erstellung und Pflege von Modellen ist sehr aufwendig. Als alleiniges Beschreibungsmittel sind sie für Systemmodellierungen im Großen daher nicht geeignet.
 \subsection{Eignung}
+\label{scc:SDL_Eignung}
+Da \ac{SDL} eine Formate, objektorientierte Modellierungssprache ist, deckt sie somit die Formalen Kriterien der Korrektheit aus \pageref{scc:Korrektheit}, sowie die der Strukturierbarkeit aus \pageref{scc:Strukturierbarkeit} ab. Sowohl Syntax als auch die Semantik der einzelnen Konstrukte und Konzepte werden präzise definiert und bieten somit keinen Interpretationsfreiraum. Es sichert Konsistenz und Klarheit über das Modell und eignet sich daher perfekt für kritische Kommunikationssysteme in denen harte Anforderungen gestellt werden. Ihre Strukturierbarkeit verdankt \ac{SDL} vor allem den Neuerungen aus Version \ac{SDL}-2000, welche die Sprache um objektorientierte Aspekte erweitert hat.
+
+Durch die Konzepte der Objektorientierung wie Kapselung, Vererbung, Polymorphismus und dynamischem Binden, kann das Modell in Teilmodelle modularisiert werden und außerdem die Wiederverwendbarkeit als auch die Wartbarkeit gesteigert werden. Dadurch eignet sich \ac{SDL} auch für die Entwicklung in mehreren größeren Teams. 
+
+Die Vollständigkeit von \ac{SDL} wird durch ihre Spezifikation gezeigt, in der für Ersteller und Leser alle vorkommenden Sprachbausteine und Konzepte vollumfänglich beschrieben werden. Das bedeutet es existiert keines bei dem dies nicht der Fall ist. Vollständigkeit sollte im Allgemeinen und besonders in Kommunikationssystemen als kritische Voraussetzung zur Eignung betrachtet werden, da eine nicht Beschreibung immer zu Inkonsistenz in der Interpretation führt.
+
+Das Kriterium der Einheitlichkeit ist ebenso vorhanden, wie das der Redundanzfreiheit. Ersteres kann man anhand der Definition der einzelnen Konstrukte in der Spezifikation nachvollziehen und letzteres is ebenfalls von der Spezifikation eindeutig redundanzfrei. Enthält also keine Doppeldefinition für verschiedene Konstrukte. 
+
+
+
 
 \subsection{Uneignung}
+\label{scc:SDL_Uneignung}
 
 \subsection{Fazit}
+\label{scc:SDL_Fazit}
 
 \begin{tabular}{|l|c|c|}
 	\hline
