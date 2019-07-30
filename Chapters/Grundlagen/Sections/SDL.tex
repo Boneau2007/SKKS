@@ -79,27 +79,34 @@ In \ac{SDL} können Daten auf zwei Arten beschrieben werden, einerseits mit dem 
 
 \subsection{Objektorientierung} 
 \label{ssc:Vererbung}
-Die objektorientierten Konzepte von \ac{SDL} bieten dem Anwender eine Möglichkeit sein System zu strukturieren, wiederzuverwenden und das Modell ähnlicher der Realwelt abzubilden. So ist es möglich für einen Prozess-/Block-Agenten eine Prozess-/Block-Klasse zu erstellen.
-Bei der Verwendung von Klassen, unterscheiden sich der objektorientierte und nicht-objektorientierte Ansatz syntaktisch zuerst nicht. Jedoch ist es möglich im objektorientierten Ansatz Instanzen der Klasse zu erzeugen.
+Die objektorientierten Konzepte von \ac{SDL} bieten dem Anwender eine Möglichkeit sein System zu strukturieren, wiederzuverwenden und das Modell ähnlicher der Realwelt abzubilden. So ist es möglich für einen Prozess-/Block-Agenten eine Prozess-/Block-Klasse zu erstellen. Im objektorientierten Ansatz werden diese auch als Typ (in \ac{SDL} type) bezeichnet. Diese werden für die Instanziierung, Vererbung und Spezialisierung von Typen verwendet. Ein Klassenagent kann auf jeder beliebigen Ebene definiert werden, egal ob nahe beim Kontext oder nicht.
+Bei der Verwendung von Klassen, unterscheiden sich der objektorientierte und nicht-objektorientierte Ansatz syntaktisch zuerst nicht. Jedoch ist es möglich im objektorientierten Ansatz Instanzen der Klasse zu erzeugen \cite[4\psqq]{ITUT100_2016}.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Graphics/ProcessInit.pdf}
+	\caption{OO-Konzepte von SDL}
+	\label{fig:OOKonzept}
+\end{figure}v
 
 \subsection{Spracheigenschaften}
 \label{ssc:Spracheigenschaften}
-Die Eigenschaften der Sprachdefinition von \ac{SDL} sind folgend beschrieben[REC111P.3]:
+Die Eigenschaften der Sprachdefinition von \ac{SDL} sind folgend beschrieben\cite[2\psq]{ITUT111_2016}:
 \begin{itemize}{
-		\item[Abstrakte Grammatik] Die abstrakte Grammatik von \ac{SDL} wird von einer abstrakten Syntax und  statischen Bedingungen 
+		\item[Abstrakte Grammatik] Die abstrakte Grammatik von \ac{SDL} wird von einer abstrakten Syntax und statischen Bedingungen 
 		beschrieben. Die Abstrakte Syntax kann entweder mit einer textbasierten Grammatik oder einem grafischen Metamodell erstellt werden.
 		
-		\item[Konkrete Grammatik] Die konkrete Syntax wird durch eine grafische Syntax, statischen Be,
-		dingungen und Regeln für die grafische Syntax beschrieben.
+		\item[Konkrete Grammatik] Die konkrete Grammatik wird durch eine grafische Syntax, statischen Bedingungen und Regeln für die grafische Syntax beschrieben.
 		Beschrieben wird sie durch die erweiterte Backus-Naur Form. Wenn jedoch in der abstrakten Grammatik ein 
 		grafisches Metamodell verwendet wurde, ist es erlaubt dieses um konkrete Eigenschaften zu erweitert und zu verwenden.
 		
-		\item[Semantik] Die Semantik beschreibt ein Konstrukt,samt dessen Eigenschaften, Interpretation und dynamischen Bedingungen.
+		\item[Semantik] Die Semantik gibt einem Konstrukt eine klare Bedeutung. Sie enthält dessen Eigenschaften, die Art der Interpretation und dynamischen Bedingungen die erfüllt sein müssen, damit das Konstrukt sich so verhält, sodass es in der Art verhält wie die Sprache gestaltet wurde. Die Eigenschaften sind wohl definierte Beziehungen, zwischen verschiedenen Konzepten.
 		
-		\item[Model] Ein Model gibt Notationen eine Abbildungsform, wenn diese keine direkte abstrakten Syntax besitzen.
+		\item[Model] Das Model gibt Notationen eine Abbildungsform, wenn diese keine direkte abstrakten Syntax besitzen. Diese sind dann nach der konkreten Syntax anderer Konstrukte zu modellieren. Diese Konstrukte werden als "shorthand" bezeichnet und  beinhalten die Syntax der transformierten Form.
 }\end{itemize}
 
 \subsubsection{Metamodell}
 \label{ssc:Metamodell}
 Es werden derzeit Anstrengungen unternommen ein öffentlich zugängliches Metamodell von \ac{SDL} zu erstellen, welches alle Aspekte der Sprache in sich vereinigt. Zu dem derzeitigen Standpunkt existiert jedoch keines oder ist nicht uns bekannt. Deswegen hat die \ac{ITU-T} selbst ein Meta-Metamodell auf Grundlage von 
-\ac{UML} erstellst, welches jedoch auch die Definition nicht vollends abdeckt. Das Meta-Metamodell wird auch als SDL-UML bezeichnet.
+\ac{UML} erstellst, welches jedoch auch die Definition nicht vollends abdeckt. Das Meta-Metamodell wird auch als SDL-UML bezeichnet \cite[18]{ITUT109_2016}.
