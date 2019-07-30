@@ -119,4 +119,21 @@
   url         = {https://www.omg.org/spec/UML/2.5.1/PDF},
 }
 
+@Book{JaneFröming_2009,
+  title     = {Ein Konzept zur Simulation wissensintensiver Aktivitäten in Geschäftsprozessen},
+  publisher = {GITO-Verlag},
+  year      = {2009},
+  author    = {Jane Fröming},
+  month     = dec,
+  isbn      = {978-3940019851},
+}
+
+@TechReport{Frank_1997,
+  author      = {Ulrich Frank, Michael Prasse},
+  title       = {Bezugsrahmen zur Beurteilung objektorientierter Modellierungssprachen- veranschaulicht am Beispiel von OML und UML},
+  institution = {Institut für Wirtschaftsinformatik - Universität Koblenz Landau},
+  year        = {1997},
+  url         = {https://www.wi-inf.uni-duisburg-essen.de/FGFrank/documents/Arbeitsberichte_Koblenz/Nr6.pdf},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

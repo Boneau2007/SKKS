@@ -27,7 +27,7 @@ Seit \ac{SDL}-2000 werden alle Funktionsblöcke übergreifend als Agenten bezeic
 
 \subsection{Kommunikation}
 \label{ssc:Kommunikation}
-Die Kommunikation innerhalb von \ac{SDL} findet asynchron über Nachrichten bzw. mit diskreten Signalen (in SDL signals) über Kanäle (in \ac{SDL} channel}) statt. 
+Die Kommunikation innerhalb von \ac{SDL} findet asynchron über Nachrichten bzw. mit diskreten Signalen (in \ac{SDL} signals) über Kanäle (in \ac{SDL} channel) statt. 
 Diese können sowohl auf Systemebene, als auch auf Blockebene definiert werden und verbinden die Agenten untereinander oder mit der Umgebung.
 Jeder Kanal besitzt einen Namen, genauso wie Nachricht aber auch optionale Parameter besitzen und in eine Liste gruppiert werden können.
 Ein Kanal besteht immer aus einer Quelle und einem Endpunkt. Kanäle werden entweder Bi- oder Unidirektional definiert. Der Kanal muss entweder in einem anderen Agenten oder in die Umgebung (in \ac{SDL} environment) enden. Er kann aber auch den innerbefindlichen Prozess eines Agenten mit der Umgebung bzw. mit einem anderen innerbefindlichen Agenten verbinden \cite[39-42]{ITUT101_2016}. Dabei ist die Umgebung alles, was in einer \ac{SDL} spezifischen Sprache mit dem System kommunizieren kann \cite[3\psq]{ITUT100_2016}.

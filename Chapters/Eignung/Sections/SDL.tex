@@ -1,6 +1,6 @@
 \section{SDL}
 \label{sc:SDLB}
-\ac{SDl} ist eine alte und häufig verwendete Modellierungssprache zum spezifizieren und beschreiben von verteilten Kommunikationssystemen. 
+\ac{SDL} ist eine alte und häufig verwendete Modellierungssprache zum spezifizieren und beschreiben von verteilten Kommunikationssystemen. 
 Es schließt die Lücke zwischen Spezifikation und Implementierung, da sie Modellierung auf einem abstraktem Level ermöglicht und eine detaillierte Beschreibung der Implementation liefert. \ac{SDL} verwendet ein  explizites  Nachrichtenkonzept,  welches  zwar  einen  erhöhten  Aufwand  bei  Modellerstellung und -pflege erfordert, dafür aber fehlerrobuster ist. 
 
 
@@ -13,22 +13,44 @@ Durch die Konzepte der Objektorientierung wie Kapselung, Vererbung, Polymorphism
 
 Die Vollständigkeit von \ac{SDL} wird durch ihre Spezifikation gezeigt, in der für Ersteller und Leser alle vorkommenden Sprachbausteine und Konzepte vollumfänglich beschrieben werden. Das bedeutet es existiert keines bei dem dies nicht der Fall ist. Vollständigkeit sollte im Allgemeinen und besonders in Kommunikationssystemen als kritische Voraussetzung zur Eignung betrachtet werden, da eine nicht Beschreibung immer zu Inkonsistenz in der Interpretation führt.
 
-Das Kriterium der Einheitlichkeit ist ebenso vorhanden, wie das der Redundanzfreiheit. Ersteres kann man anhand der Definition der einzelnen Konstrukte in der Spezifikation nachvollziehen und letzteres is ebenfalls von der Spezifikation eindeutig redundanzfrei. Enthält also keine Doppeldefinition für verschiedene Konstrukte. 
+Das Kriterium der Einheitlichkeit ist ebenso vorhanden, wie das der Redundanzfreiheit. Ersteres kann man anhand der Definition der einzelnen Konstrukte in der Spezifikation nachvollziehen und letzteres is nach betrachten der Spezifikation augenscheinlich redundanzfrei. Es sind also keine Doppeldefinition für verschiedene Konstrukte enthalten. 
 
+Die frage nach der Einfachheit und Erlernbarkeit von \ac{SDL} ergibt sich aus der unseres Erachtens geringen Anzahl an Notationselementen und Begriffen, die in der Sprachdefinition spezifiziert sind. So defniert \ac{SDL} ***EInfachheit und Erlernbarkeit noch zuende führen***
 
+\ac{SDL}s Sprachkonszept bedient sich an vielen technischen Bezeichnungen aus der Telekommunikation und bezieht somit seinen Sprachraum aus dem informatisch, technischen Bereich. Dies ist dem geschuldet, da \ac{SDL} von Telekommunikationsfirmen  entwickelt und verabschiedet wurde um fachliche Kontexte aus der Telekommunikationsindustrie zu vereinheitlichen. Da wir nicht sehen, dass ein unfachlicher Sprachumfang für eine Fachperson als verständlich angesehen werden kann, so kann auch die Modellierungssprache als verständlich angesehen werden.
 
+***Aspekt Anschaulichkeit fehlt****
 
 \subsection{Uneignung}
 \label{scc:SDL_Uneignung}
-
+\ac{SDL} eignet sich nicht für Fachfremde Anwender und Leser, da für diese die Konzepte und Sprachmittel der Sprache nicht verständlich sein dürften. 
 \subsection{Fazit}
 \label{scc:SDL_Fazit}
-
-\begin{tabular}{|l|c|c|}
+\begin{tabularx}{\textwidth}{|l|l|l|}
 	\hline
-	Kriterium & Vorteil & Nachteil  \\
+	Kriterium & Eignung & Uneignung  \\
 	\hline
-	Spalte 1 & Aufwendige aber fehlerrobuste Modellierung von Kommunikation durch Nachrichtenkanäle. & Verwendung einer schwer verständlichen formalen axiomatischen Notation. \\
+	Korrektheit	& & \\
 	\hline
+	Einheitlichkeit & & \\
 	\hline
-\end{tabular}
+	Redundanzfreiheit & & \\
+	\hline	
+	Strukturierbarkeit & & \\
+	\hline
+	Einfachheit und 
+	Erlernbarkeit & & Verwendung einer schwer verständlichen formalen axiomatischen Notation.  \\
+	\hline
+	Verständlichkeit & & \\
+	\hline
+	Anschaulichkeit & & \\
+	\hline	
+	Angemessenehit 	& & \\
+	\hline
+	Mächtigkeit & & \\
+	\hline
+	Operationalisierbarkeit & Aufwendige aber fehlerrobuste	Modellierung von Kommunikation durch Nachrichtenkanäle. & \\
+	\hline
+	Überprüfbarkeit & & \\
+	\hline
+\end{tabularx} 
