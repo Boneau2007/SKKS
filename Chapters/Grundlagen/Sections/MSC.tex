@@ -23,9 +23,7 @@ Diese Ereignissen können in verschiedenen Fromen erscheint werden, zum Beispiel
 Um ein Basic-MSC besser zu erklären, ist ein Beispiel davon in der nächsten Abbildung gezeigt.
 Ein Basic-MSC mit dem Namen ProduktionAC ist in
 Abbildung 1.6 gezeigt.
-\begin{center}
-\begin{figure}[h]
-   
+
 
 \includegraphics[scale=1]{Graphics/MSC1.jpg}
 
@@ -36,17 +34,10 @@ Quelle : \cite{MT009}
 Part 1: Message Sequence Chart (MSC) 
 
  
-\label{fig7}
 
-
-\end{figure}
-
-\end{center}
-\newpage
 Der Name von diesem Basic-MSC ist ProduktionAC und er muss oben in der Ecke geschrieben werden. Das Basic-MSC in diesem Beispiel beschreibt die Produktion eines Produkts, das aus einem A-Teil und einem C-Teil zusammengesetzt ist.
-Die wichtige Elemente in dieser Abbildung sind: Der Produktionszelle, FabrikfürC und Fabrik von D. Das MSC beschreibt ein detaillierte Szenario vom Informationsaustausch zwischen diese drei Element. 
+Die wichtige Elemente in dieser Abbildung sind: Der Produktionszelle, FabrikfürC und Fabrik von D. Das MSC beschreibt ein detaillierte Szenario vom Informationsaustausch zwischen diese drei Element.\\
 
-\\
 Am Anfang ist der Produktionsprozess in seinem Initialzustand, Der ein benötige Bedingung für die nächste Aktionen ist. 
  Das System ist initialisiert und Teile
 der Typen C und D sind gefertigt, eingelagert und der
@@ -62,7 +53,6 @@ In der Gleichzeitig wird ein neues C-Teil wieder produziert und es ist jetzt ver
 
 \subsubsection{Instanz und Message}
 Instanzen und Nachrichten (Message) sind die wichtigste Sprachkunstrukte von Basic-MSC.
-
 Instanzen sind Komponenten, die mit der Systemumgebung oder untereinander
 asynchron Nachrichten austauschen können.\\
 Die Instanzen sind als vertikale Linien dargestell. Am Enfang dieser Linier findet man der Instanzkopf, wo der Instanzname spezifiziert wird. Zusätzlich kann man noch direkt über den Instanzkopf ein Typ zu dieser Instanz angeben (z.B. Instanz Produktionszelle vom Typ Roboterplatz in Abbildung).
@@ -87,7 +77,6 @@ dem Environment (z.B. die Messages NeuesTeil und
 Produkt in Abbildung). Die Sende- und Verarbeitungsereignisse aus und an die Systemumgebung definieren in der Regel keine Ordnung.
 
 \subsubsection{Action}
-
 Aktionen von Instanzen können ind Form von Actions spezifiziert werden.
 Eine Action wird durch ein Rechtecksymbol dargestellt, der Name der Aktion enthalten kann (z.B. Action ,Produkt
 montieren und ausliefern‘ in Abbildung).
@@ -96,17 +85,15 @@ montieren und ausliefern‘ in Abbildung).
 Die Sprachkonstrukte Timer-Start, Timeout und Timer-Stop können zusätzlich die Timern beschreiben, damit wird es deutlicher den Anfang und das Ende der Aktionen definiert.
 Der Anfang der Pfeile(mit Sanduhr-Symbol) definiert das Time-Start und das Ende der Pfeile definiert das Timeout. Zusätzlich muss man den Name von Timer und optional die Timer-Parametern definieren.
 
-Ein Timer-Start und seine Timeout werden
-in Bild Abbildung verwendet, um die Produktionszeit für ein Teil des
-Typs C zu modellieren.In diesem Fall hat der Timer hat den Namen T und
-den Parameter Prodzeit.\\
+Ein Timer-Start und seine Timeout werden in Bild Abbildung verwendet, um die Produktionszeit für ein Teil des Typs C zu modellieren.In diesem Fall hat der Timer hat den Namen T und
+den Parameter Prodzeit.
 \subsubsection{Condition}
 Die Beschreibung vom Zustand definiert durch Condition ( Bedingung)
 Graphisch werden Conditions durch Sechsecke dargestellt,
 die die Instanzen, auf die sich die Condition bezieht,
 überdecken. Conditions werden zur Beschreibung von
 wichtigen Systemzuständen benutzt. In Abbildung befinden sich
-zwei Conditions, die Initialzustand heißt und den globalen Systemzustand beschreiben.\\
+zwei Conditions, die Initialzustand heißt und den globalen Systemzustand beschreiben.
 
 
 \subsection{Strukturelle Sprachkonstrukte}
@@ -120,9 +107,7 @@ MSC-Instanzen verfeinern (Decomposition) und allgemeine
 Ereignisstrukturen für Instanzen definieren (Coregion und
 General Ordering).\cite{MT009}\\
 
-\begin{center}
-\begin{figure}[h]
-   
+
 
 \includegraphics[scale=1]{Graphics/MSCmit.jpg}
 
@@ -133,13 +118,7 @@ Quelle : \cite{MT009}
 Part 1: Message Sequence Chart (MSC) 
 
  
-\label{fig8}
 
-
-\end{figure}
-
-\end{center}
-\newpage
 \subsubsection{Inline-Expressions}
 Inline-Expression werden als Operatoren in MSCs definiert. Damit können Teilabläufe,
 die innerhalb eines MSC-Diagramms spezifiziert worden sind, zu komplexeren Abläufen kombiniert werden. Sie erlauben es, die Wiederholung von Teilabläufen (loop-Operator),
@@ -158,9 +137,7 @@ Kombination von MSCs in einer Einzige Abbildung und in einer sehr intuitiven For
 
 
 
-\begin{center}
-\begin{figure}[h]
-   
+
 
 \includegraphics[scale=1]{Graphics/HMSC.jpg}
 
@@ -171,13 +148,7 @@ Quelle : \cite{MT009}
 Part 1: Message Sequence Chart (MSC) 
 
  
-\label{fig9}
 
-
-\end{figure}
-
-\end{center}
-\newpage
 In der Abbildung beschreibt das HMSC-Beispiel, die verschiedene Szenarien, die im Produktionsprozess-Beispiel passieren können. 
 Die verschieden Szenarien in dieser Abbildung sind:Am Anfang gibt es direkt die Initialisierungsphase,danach
 befindet sich der Produktionsprozess in seinem
