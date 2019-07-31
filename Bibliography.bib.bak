@@ -1,5 +1,6 @@
 % Encoding: UTF-8
-{MT001,
+
+@Book{MT001,
   author    = {Roger Süttenbach and Jürgen Ebert},
   title     = {A Booch Metamodel},
   year      = {1997},
@@ -15,7 +16,7 @@
   year      = {2014},
   publisher = {Springer Vieweg},
   isbn={978-3-8348-2303-8},
-  
+
 }
 
 @Book{MT003,
@@ -24,7 +25,7 @@
   year      = {2006},
   publisher = {Springer Vieweg},
   isbn={978-3834819000},
-  
+
 }
 
 @Book{MT004,
@@ -32,6 +33,57 @@
   title     = {Some Findings on the Intuitiveness of Entity Relationship Constructs},
   year      = {1990},
   publisher = {Elsevier},
+
+}
+
+@Book{MT005,
+  author    = {Prozessmanagement in MV },
+  title     = {Ausgewählte Modellierungs-Notationen im Überblick},
+  year      = {2011},
+  publisher = {DVZ Datenverarbeitungszentrum Mecklenburg-Vorpommern GmbH},
+  url       = {http://www.cio.m-v.de/static/CIO/Dateien/KE/Prozessmanagement/Anlage_Modellierungsnotationen_im_Ueberblick_V03.pdf,
+
+}
+
+@Book{MT006,
+  author    = {ULRICH FRANK, BODO L. VAN LAAK},
+  title     = {EIN BEZUGSRAHMEN ZUR EVALUATION VON SPRACHEN ZUR MODELLIERUNG VON GESCHÄFTSPROZESSEN},
+  year      = {2003},
+  publisher = {Universität Koblenz-Landau},
+  url       = {http://www.bodovanlaak.de/download/Publications/Ein%20Bezugsrahmen%20zur%20Evaluation%20von%20Sprachen%20zur%20Gesch%C3%A4ftsprozessmodellierung.pdf,
+
+}
+
+@Book{MT007,
+  author    = {Christopher Lobe},
+  title     = {Bewertung der Eignung von Modellierungssprachen zur ebenenübergreifenden Prozessdarstellung im Managementhandbuch},
+  year      = {2015},
+  publisher = {Otto-von-Guericke-Universität Magdeburg},
+  url       = {http://bauhaus.cs.uni-magdeburg.de:8080/miscms.nsf/FEA8C8150500AA14C1257449004F79A9/A066435FF04D9DBCC125820B0068A184/$FILE/Masterarbeit%20Christopher%20Lobe.pdf,
+  
+}
+@Book{MT008,
+  author    = {Kai Lennard Kerber},
+  title     = {Performance Message Sequence Chart –Sprache zur Leistungsvorhersage mittels der Generierung eines Prototypen im Kontext des Protokollentwurfs mit SDL und MSC},
+  year      = {2007},
+  publisher = {Der Technischen Fakultät der Universität Erlangen-Nürnberg zur Erlangung des Grades},
+  url       = {https://opus4.kobv.de/opus4-fau/frontdoor/index/index/year/2008/docId/550,
+  
+}
+@Book{MT009,
+  author    = {Jens Grabowski, Ekkart Rudolph und Michael Schmitt},
+  title     = {Die Spezifikationssprachen MSC und SDL},
+  subtitle = {Teil 1: Message Sequence Chart (MSC)},
+  year      = {2001},
+  url       = {https://www.swe.informatik.uni-goettingen.de/sites/default/files/publications/at-sdl-0202.pdf,
+  
+}
+@Book{MT010,
+  author    = {Frank, Ulrich und Prasse, Michael},
+  title     = {Ein Bezugsrahmen zur Beurteilung objektorientierter Modellierungssprachen - veranschaulicht am Beispiel von OML und UML},
+  year      = {1997},
+  publisher = {Universität Koblenz-Landau},
+  url       = {https://www.wi-inf.uni-due.de/FGFrank/documents/Arbeitsberichte_Koblenz/Nr6.pdf,
   
 }
 {MT011,
