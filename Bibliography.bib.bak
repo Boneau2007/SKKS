@@ -111,6 +111,22 @@
   publisher = {European Journal of Information Systems},
   
 }
+@Book{MT014,
+  author    = {Frank Hogrebe, Markus Nüttgens },
+  title     = {Rahmenkonzept zur Messung und Bewertung der Gebrauchstauglichkeit von Modellierungssprachen:},
+  year      = {2009},
+  publisher = {Universität Hamburg},
+  url       = {https://www.bwl.uni-hamburg.de/harcis/forschung/arbeitsberichte/arbeitsberichte-wiinf-7-2009.pdf,
+  
+}
+@Book{MT015,
+  author    = {Frank Hogrebe, Markus Nüttgens },
+  title     = {Rahmenkonzept zur Messung und Bewertung der Gebrauchstauglichkeit von Modellierungssprachen:},
+  year      = {2009},
+  publisher = {Universität Hamburg},
+  url       = {https://www.bwl.uni-hamburg.de/harcis/forschung/arbeitsberichte/arbeitsberichte-wiinf-7-2009.pdf,
+  
+}
 
 @TechReport{ITUT101_2016,
   author      = {International Telecommunication Union},
