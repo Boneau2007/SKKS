@@ -22,9 +22,8 @@ Die Konstrukte welche \ac{SDL} in der Spezifikation erfasst sind, haben eine str
 
 Da die \ac{SDL} eine formale Modellierungssprache mit abstrakter Syntax und kontextfrei ist, kann sie in der Chomsky-Hierarchie als eine Typ-2 kontextfreie Grammatik eingestuft werden. Dies würde die Mächtigkeit ihrer Sprache in der Automatentheorie beschreiben. Es ist also nicht entscheidbar ob ein Konstrukt der Sprache Eindeutig oder Mehrdeutig definiert ist. Da aber durch Testverfahren beim vergleichen der jeweiligen Konstrukte keine Mehrfachdefinition gefunden wurde, kann dies ausgeschlossen werden. Relativ zur Anwendungsdomäne betrachtet deckt die Spezifikation unter anderem Protokollspezifikationen in Kommunikationssystemen ab. Auch hier ist aber wieder die Mächtigkeit in Bezug auf eine beliebig andere Anwendungsdomäne nicht gegeben, da hier die nötigen Sprachkonstrukte und Vorschriften zur Abbildung fehlen. 
 
-\ac{SDL} lässt sich unseres Erachtens zuerst nicht mit großem Aufwand in eine andere Modellierungssprache transformieren, dazu ist die Modellierungssprache zu stark abhängig von ihren Sprachkonzepten. Genauso ist sie schlecht darin andere Sachverhalte als Spezifizierung und Verhaltensbeschreibung darzustellen, da ihr die nötigen Sprachmittel aus der Spezifikation fehlen. Beispielsweise kann sie nicht so für Testfälle verwendet werden wie \ac{MSC}.
-
-*****Noch Überprüfbarkeit*****
+\ac{SDL} lässt sich unseres Erachtens nicht mit in eine andere Modellierungssprache transformieren, dazu ist die Modellierungssprache zu stark abhängig von ihren domänenspezifischen Sprachkonzepten. Genauso ist sie schlecht darin andere Sachverhalte als Spezifizierung und Verhaltensbeschreibung darzustellen, da ihr die nötigen Sprachmittel aus der Spezifikation fehlen. Beispielsweise kann sie nicht so für Testfälle verwendet werden wie dies bei \ac{MSC} der Fall ist.
+Da die Modellierungssprache unseres Erachtens nach sich nur auf geplante realitäten bezieht und faktische nicht mit einbezieht, kann eine Einschätzung nur durch die Betrachter erfolgen und somit ist eine Betrachtung der Überprüfbarkeit nur schwer von uns vornehmbar und muss von Modell zu Sachverhalt einzeln abgewogen werden.
 
 \subsection{Fazit}
 \label{scc:SDL_Fazit}
@@ -34,10 +33,22 @@ Alles in allem ist \ac{SDL} eine sehr solide Modellierungssprache wenn es um for
 	\hline
 	Kategorie & Eignung & Uneignung  \\
 	\hline
-	Formale Kriterien	& & \\
+	Formale Kriterien	&
+	\begin{itemize}
+		\item 
+	\end{itemize} & \\
 	\hline
-	Anwenderbezogene Kriterien & Verwendung einer schwer verständlichen formalen axiomatischen Notation. & \\
+	Anwenderbezogene Kriterien &
+	\begin{itemize}
+		\item
+		\end{itemize}  & 
+	\begin{itemize}
+		\item 
+	\end{itemize} \\
 	\hline
-	Anwendungsbezogene Kriterien & Aufwendige aber fehlerrobuste	Modellierung von Kommunikation durch Nachrichtenkanäle. & \\
+	Anwendungsbezogene Kriterien &
+	\begin{itemize}
+		\item Aufwendige aber fehlerrobuste	Modellierung von Kommunikation durch Nachrichtenkanäle.
+	\end{itemize}   & \\
 	\hline
 \end{tabularx} 
