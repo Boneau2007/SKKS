@@ -16,7 +16,7 @@ Ein Prozess ist auf der untersten hierarchischen Ebene und beschreibt das dynami
  
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{Graphics/Agenten.pdf}
+	\includegraphics[width=0.6\textwidth]{Graphics/Agenten.pdf}
 	\caption{SDL Architekturhierarchie}
 	\label{fig:Agenten}
 \end{figure}
@@ -30,65 +30,61 @@ Seit \ac{SDL}-2000 werden alle Funktionsblöcke übergreifend als Agenten bezeic
 Die Kommunikation innerhalb von \ac{SDL} findet asynchron über Nachrichten bzw. mit diskreten Signalen (in \ac{SDL} signals) über Kanäle (in \ac{SDL} channel) statt. 
 Diese können sowohl auf Systemebene, als auch auf Blockebene definiert werden und verbinden die Agenten untereinander oder mit der Umgebung.
 Jeder Kanal besitzt einen Namen, genauso wie Nachricht aber auch optionale Parameter besitzen und in eine Liste gruppiert werden können.
-Ein Kanal besteht immer aus einer Quelle und einem Endpunkt. Kanäle werden entweder Bi- oder Unidirektional definiert. Der Kanal muss entweder in einem anderen Agenten oder in die Umgebung (in \ac{SDL} environment) enden. Er kann aber auch den innerbefindlichen Prozess eines Agenten mit der Umgebung bzw. mit einem anderen innerbefindlichen Agenten verbinden \cite[39-42]{ITUT101_2016}. Dabei ist die Umgebung alles, was in einer \ac{SDL} spezifischen Sprache mit dem System kommunizieren kann \cite[3\psq]{ITUT100_2016}.
-Abbildung \ref{fig:KommModell} verdeutlicht dies in einem Beispiel.
+Ein Kanal besteht immer aus einer Quelle und einem Endpunkt. Kanäle werden entweder Bi- oder Unidirektional definiert. Dabei kann ein Kanal verzögert oder nicht verzögert wirken. So können Nachrichten verzögert ankommen. Der Kanal muss entweder in einem anderen Agenten oder in die Umgebung (in \ac{SDL} environment) enden. Er kann aber auch den innerbefindlichen Prozess eines Agenten mit der Umgebung bzw. mit einem anderen innerbefindlichen Agenten verbinden \cite[39-42]{ITUT101_2016}. Dabei ist die Umgebung alles, was in einer \ac{SDL} spezifischen Sprache mit dem System kommunizieren kann \cite[3\psq]{ITUT100_2016}.
+Abbildung \ref{fig:KommModell} zeigt die verschiedenen Kanäle beispielhaft.
  
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=1\textwidth]{test.png}
-	\caption{Kommunikationsmodell}
+	\includegraphics[width=0.6\textwidth]{Graphics/Channel.png}
+	\caption{Verzögerte und nicht verzögerte Kanäle in SDL}
 	\label{fig:KommModell}
 \end{figure}
 
 \subsection{Systemverhalten}
 \label{ssc:Verhalten}
 Das Verhalten von \ac{SDL} wird in Prozessen definiert, welche automatenbasiert und wie eben besprochen, mittels \ac{EFSM}s repräsentiert werden. Sie bestehen aus einer Menge an Zustandsübergängen, welche Beispielhaft in Abbildung \ref{fig:Basiskonstrukte} zu sehen sind. Darunter gehören Zustände wie Start, Bedingung, Eingabe und Ausgabe. Da eine Aufzählung dem Sinn der Arbeit nicht dienlich ist, wird in diesem Zusammenhang auf die Spezifikation verwiesen \cite[44 \psqq]{ITUT101_2016}.
-Ein Prozess besitzt eine Prozess-Id (in \ac{SDL} PId), damit bei Instanziierung eines Prozesses, diese unterschieden werden können. Zusätzlich besitzt er einen Eingabepuffer zum Speichern von Nachrichten. Dieser Puffer übergibt nach dem \ac{FIFO}-Prinzip nacheinander die anstehenden Nachrichten des verbundenen Kanals an den Prozess \cite[42]{ITUT101_2016}. Kommen zwei Nachrichten von mehreren Kanälen gleichzeitig an einem Prozess an, so ist das Systemverhalten undefiniert und nach dem Zufall wird eine der beiden Nachrichten zuerst ausgeführt.
+
+
+Ein Prozess besitzt eine Prozess-Id (in \ac{SDL} PId), damit bei Instanziierung eines Prozesses, diese unterschieden werden können. Zusätzlich besitzt er einen Eingabepuffer zum Speichern von Nachrichten. Dieser Puffer übergibt nach dem \ac{FIFO}-Prinzip nacheinander die anstehenden Nachrichten des verbundenen Kanals an den Prozess \cite[42]{ITUT101_2016}. Abbildung \pageref{fig:ProcessInit} zeigt einen Prozess beispielhaft. Kommen zwei Nachrichten von mehreren Kanälen gleichzeitig an einem Prozess an, so ist das Systemverhalten undefiniert und nach dem Zufall wird eine der beiden Nachrichten zuerst ausgeführt.
 Die Modellierung der Automaten richtet sich oft nach Mealy, wobei in diesem die Ausgabe von seinem Zustand und seiner Eingabe abhängt.
 Im Gegensatz zu Moore-Automaten enthält er keinen Startzustand, wobei jeder Mealy-Automat in einen Moore-Automat übertragen werden kann.
+\pagebreak
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.5\textwidth]{Graphics/Basiskonstrukte.pdf}
+	\includegraphics[width=0.4\textwidth]{Graphics/Basiskonstrukte.pdf}
 	\caption{SDL-Basiskonstrukte}
 	\label{fig:Basiskonstrukte}
-\end{figure}v
-
-
-\subsection{Datenmodellierung}
-\label{ssc:Daten}
-In \ac{SDL} können Daten auf zwei Arten beschrieben werden, einerseits mit dem \acs{ADT} oder mit \ac{ASN1}. \ac{ADT} definiert keine Datenstrukturen, sondern jeweils einen Satz (in \ac{SDL} sorts) an Werten, Operation und Bedingungen \cite[67]{ITUT104_2016}. In \ac{ADT} sind einige Datentypen wie Boolean, Character, Charstring, Integer und Real vordefiniert, aber auch Konstrukte wie Array und Enum. Eine Liste der vordefinierten Datentypen kann aus der Spezifikation entnommen werden \cite[47\psqq]{ITUT104_2016}. Neue Datentypen lassen sich durch bereits vorhandene Datentypen definieren, hierzu sind Einschränkungen und ein Standardwert in der Definition mit anzugeben. Abbildung \ref{fig:DatentypDef} verdeutlicht dies in einem Beispiel. In jedem Agenten lassen sich Konstanten, basierend auf den gewählten Datentypen definieren. Sie müssen einen konstanten Wert enthalten und dürfen nicht verändert werden. Variablen können nur in Prozessen definiert werden, enthalten denselben Aufbau wie Konstanten und können nur in ihrem definierten Prozess geändert werden. Zwar sind keine globalen Variablen zulässig, jedoch können Prozess eigene Variablen anderen Prozessen sichtbar gemacht werden. Diese Variablen nennt man remote variables \cite[31]{ITUT102_2016}.
-
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\textwidth]{Graphics/Basiskonstrukte.pdf}
-	\caption{SDL-Datentypdefinition}
-	\label{fig:DatentypDef}
-\end{figure}v
-
+\end{figure}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{Graphics/ProcessInit.pdf}
 	\caption{SDL-Prozessinitialisierung}
 	\label{fig:ProcessInit}
-\end{figure}v
+\end{figure}
 
 
+\pagebreak
+\subsection{Daten}
+\label{ssc:Daten}
+In \ac{SDL} können Daten auf zwei Arten beschrieben werden, einerseits mit dem \acs{ADT} oder mit \ac{ASN1}. \ac{ADT} definiert keine Datenstrukturen, sondern jeweils einen Satz (in \ac{SDL} sorts) an Werten, Operation und Bedingungen \cite[67]{ITUT104_2016}. In \ac{ADT} sind einige Datentypen wie Boolean, Character, Charstring, Integer und Real vordefiniert, aber auch Konstrukte wie Array und Enum. Eine Liste der vordefinierten Datentypen kann aus der Spezifikation entnommen werden \cite[47\psqq]{ITUT104_2016}. Neue Datentypen lassen sich durch bereits vorhandene Datentypen definieren, hierzu sind Einschränkungen und ein Standardwert in der Definition mit anzugeben. Abbildung \ref{fig:DatentypDef} verdeutlicht dies in einem Beispiel. In jedem Agenten lassen sich Konstanten, basierend auf den gewählten Datentypen definieren. Sie müssen einen konstanten Wert enthalten und dürfen nicht verändert werden. Variablen können nur in Prozessen definiert werden, enthalten denselben Aufbau wie Konstanten und können nur in ihrem definierten Prozess geändert werden. Zwar sind keine globalen Variablen zulässig, jedoch können Prozess eigene Variablen anderen Prozessen sichtbar gemacht werden. Diese Variablen nennt man remote variables \cite[31]{ITUT102_2016}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Graphics/Data.png}
+	\caption{SDL-Datentypdefinition}
+	\label{fig:DatentypDef}
+\end{figure}
+
+Zu aller erst wird der Name des zu erstellenden Typs definiert. Dann das Set an Werten, welche verwendet werden dürfen. Und zu guter Letzt werden die Bedingungen des Typs definiert und mit dem Namen des erstellten Typs wieder abgeschlossen.
+
+\pagebreak
 \subsection{Objektorientierung} 
 \label{ssc:Vererbung}
 Die objektorientierten Konzepte von \ac{SDL} bieten dem Anwender eine Möglichkeit sein System zu strukturieren, wiederzuverwenden und das Modell ähnlicher der Realwelt abzubilden. So ist es möglich für einen Prozess-/Block-Agenten eine Prozess-/Block-Klasse zu erstellen. Im objektorientierten Ansatz werden diese auch als Typ (in \ac{SDL} type) bezeichnet. Diese werden für die Instanziierung, Vererbung und Spezialisierung von Typen verwendet. Ein Klassenagent kann auf jeder beliebigen Ebene definiert werden, egal ob nahe beim Kontext oder nicht.
 Bei der Verwendung von Klassen, unterscheiden sich der objektorientierte und nicht-objektorientierte Ansatz syntaktisch zuerst nicht. Jedoch ist es möglich im objektorientierten Ansatz Instanzen der Klasse zu erzeugen \cite[4\psqq]{ITUT100_2016}.
-
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\textwidth]{Graphics/ProcessInit.pdf}
-	\caption{OO-Konzepte von SDL}
-	\label{fig:OOKonzept}
-\end{figure}v
 
 \subsection{Spracheigenschaften}
 \label{ssc:Spracheigenschaften}
