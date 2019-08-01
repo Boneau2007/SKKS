@@ -1,14 +1,44 @@
 \section{MSC}
 \label{sc:MSCB}
-\ac{MSC} wurde von derselben Arbeitsgruppe wie \ac{SDL} spezifiziert und wird häufig in Verbindung mit anderen Modellierungssprachen verwendet. Dort wird sie unter zur Anforderungsspezifikation, Testfallspezifikation und Dokumentation verwendet. Durch ihre Flexibilität, kann sie in den unterschiedlichsten Anwendungsdomänen verwendet werden, da sie nicht explizit für eine einzige zugeschnitten wurde. Hauptvorteil von \ac{MSC} ist dessen grafisches Aussehen, welches intuitiv die Beschreibung des Systemverhaltens verständlich macht. Der Hauptaugenmerk liegt dabei bei dem Austausch von Nachrichten über Kommunikationseinheiten wie in verteilten Systemen.
+\ac{MSC} wurde von derselben Arbeitsgruppe wie \ac{SDL} spezifiziert und wird häufig in Verbindung mit anderen Modellierungssprachen verwendet. Dort wird sie unter anderem zur Anforderungsspezifikation, Testfallspezifikation und Dokumentation verwendet. Durch ihre Flexibilität, kann sie in den unterschiedlichsten Anwendungsdomänen verwendet werden, da sie nicht explizit für eine einzige zugeschnitten wurde. Hauptvorteil von \ac{MSC} ist dessen grafisches Aussehen, welches intuitiv die Beschreibung des Systemverhaltens verständlich macht. Der Hauptaugenmerk liegt dabei bei dem Austausch von Nachrichten über Kommunikationseinheiten wie in verteilten Systemen.
 \subsection{Eignung/Uneignung von MSC}
 \label{sc:MSCEignung}
-\ac{MSC} ist wie \ac{SDL} eine formale Modellierungssprache und deckt damit das Formale Kriterium der Korrektheit aus Abschnitt \pageref{ssc:Korrektheit} ab. Da auch hier wie in \ac{SDL} eine eindeutig festgelegte Semantik 
+\ac{MSC} ist wie \ac{SDL} eine formale Modellierungssprache und deckt damit unter anderem das Formale Kriterium der Korrektheit  ab. Da auch hier wie in \ac{SDL} eine eindeutig festgelegte und präzise Syntax und Semantik definiert ist, sollte es keinen Interpretationsfreiraum der Konzepte geben und fehlerhafte Modelle erkannt werden.
 
+Auch unter dem Aspekt der Vollständigkeit ist \ac{MSC} durch ihre Beschreibung in der Spezifikation in ihrem Sprachgebrauch vollständig.
 
+Genauso sind die Konzepte und Konstrukte einheitlich definiert und in der Spezifikation beschrieben. Grundsätzlich kommt Redundanz in \ac{MSC} nicht vor, zumindest nicht bei der reinen Definition der Konstrukte. Jedoch ist es möglich redundante Informationen in einem Modell abzubilden so könnten im Modell mehrfach hintereinander Events an Instanzen versendet werden. Zugegeben wäre dies simpel zu lösen, jedoch ist es grundsätzlich möglich.
+MSC definiert dabei Instanztypen als Antwort auf eine objektorientierte Modellierung. Sowie Vererbung von Typen. Dadurch Eignet sich der Einsatz von \ac{MSC} mit anderen objektorientierten Programmiersprachen.
+
+Die Sprache ist extrem einfach für den Anwender und Leser zu erlernen da nur äußerst wenig Konstrukte der Sprache definiert sind. So ist ihre Spezifikation gerade mal um die 135 Seiten groß. Das verschafft ihr eine
 \subsection{Fazit}
 \label{sc:MSCFazit}
+Da \ac{MSC} von derselben Arbeitsgruppe erstellt worden ist wie \ac{SDL}, ist die Philosophie zur Erstellung der Modellierungssprache eine ähnliche. Deswegen decken sich viele formale Kriterien mit \ac{SDL}. Sie kann gut für den Einsatzzweck einer teilweisen Spezifikation wie der Beschreibung von Szenarios mitwirken.
 
-
-
-MSC wird in folgenden Feldern verwendet
+\begin{table}[ht]
+	\begin{tabularx}{\textwidth}{|l|X|X|}
+		\hline
+		Formale	Kriterien &
+		\begin{itemize}
+			\item Formal beschrieben
+			\item Klare, widerspruchsfreie präzise und übersichtlich definierte Konzepte und Konstrukte
+			\item Einheitlich Konsistent und die Sprachbausteine sind mit der Spezifikation konform
+			\item Objektorientiert und lässt sich gut mit anderen Sprachen verbinden
+		\end{itemize}  & 
+		\begin{itemize}
+			\item fehlen
+		\end{itemize} \\
+	\hline
+	Anwenderbezogene Kriterien &
+	\begin{itemize}
+		\item Sehr einfach zu erlernen, da extrem kleiner Sprachumfang
+		\item 
+	\end{itemize}  & 
+	\begin{itemize}
+		\item fehlen
+	\end{itemize} \\
+		\hline
+	\end{tabularx} 
+	\caption{Eignung und Uneignung von SDL}
+	\label{tab:EignungSDL}
+\end{table} 

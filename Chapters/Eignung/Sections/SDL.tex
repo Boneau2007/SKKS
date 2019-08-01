@@ -40,6 +40,7 @@ Alles in allem ist \ac{SDL} eine sehr solide Modellierungssprache wenn es um for
 		\item Einfachheit, da Synthese gleich Analyse
 		\item Sie ist in sich Konsistenz und die Sprachbausteine sind Konform zu ihrer Spezifikation
 		\item Verminderung von Komplexität und Erhöhung der Strukturierbarkeit durch Objektorientierte Lösungsansätze
+		\item Kann wegen Formalisierung gut in Softwarewerkzeugen eingesetzt werden
 	\end{itemize} & \\
 	\hline
 	Anwenderbezogene Kriterien &
@@ -54,27 +55,25 @@ Alles in allem ist \ac{SDL} eine sehr solide Modellierungssprache wenn es um for
 	\end{itemize} \\
 	\hline
 \end{tabularx} 
-
-\pagebreak
 \begin{table}[ht]
-\begin{tabularx}{\textwidth}{|l|X|X|}
-	\hline
-	Anwendungsbezogene	Kriterien &
-	\begin{itemize}
-		\item Eignet sich hervorragend für Problemfelder der Telekommunikationsbranche
-		\item Geeignet für Anwendungen mit Echtzeitanforderungen wie der Luft- und Raumfahrt, Protokollentwicklung, verteilten Systemen, medizinischen Systemen usw. 
-		\item Aufwendige aber fehlerrobuste	Modellierung von Kommunikation durch Nachrichtenkanäle.
-		\item Ist in den benutzen Anwendungsgebieten von Kommunikationssystemen ausreichend mächtig um die Sachverhalte darstellen zu können
-		\item Ist in ihrer Überprüfbarkeit von ihrem Einsatzort abhängig, aber in ihrer gängigen Anwendungsdomäne überprüfbar. 
-	\end{itemize}   &
-
-\begin{itemize}
-	\item Ungeeignet für Anwendungen wie Prozessdarstellung, Datenbanksysteme und allgemeineren Anwendungsbereichen
-	\item Sprachkonstrukte für Anwendungsbereiche  wie Datenmodellierung fehlen
-	\hline Lässt sich nicht in andere Modellierungssprachen transformieren
-	\hline Ist schlecht prüfbar außerhalb ihres gängigen Domänenspezifischen Einsatzes.
-\end{itemize}
-\end{tabularx} 
+	\begin{tabularx}{\textwidth}{|l|X|X|}
+		\hline
+		Anwendungsbezogene	Kriterien &
+		\begin{itemize}
+			\item Eignet sich hervorragend für Problemfelder der Telekommunikationsbranche
+			\item Geeignet für Anwendungen mit Echtzeitanforderungen wie der Luft- und Raumfahrt, Protokollentwicklung, verteilten Systemen, medizinischen Systemen usw. 
+			\item Aufwendige aber fehlerrobuste	Modellierung von Kommunikation durch Nachrichtenkanäle.
+			\item Ist in den benutzen Anwendungsgebieten von Kommunikationssystemen ausreichend mächtig um die Sachverhalte darstellen zu können
+			\item Ist in ihrer Überprüfbarkeit von ihrem Einsatzort abhängig, aber in ihrer gängigen Anwendungsdomäne überprüfbar. 
+		\end{itemize}  & 
+		\begin{itemize}
+			\item Ungeeignet für Anwendungen wie Prozessdarstellung, Datenbanksysteme und allgemeineren Anwendungsbereichen
+			\item Sprachkonstrukte für Anwendungsbereiche  wie Datenmodellierung fehlen
+			\item Lässt sich nicht in andere Modellierungssprachen transformieren
+			\item Ist schlecht prüfbar außerhalb ihres gängigen Domänenspezifischen Einsatzes.
+		\end{itemize} \\
+		\hline
+	\end{tabularx} 
 \caption{Eignung und Uneignung von SDL}
 \label{tab:EignungSDL}
 \end{table} 
