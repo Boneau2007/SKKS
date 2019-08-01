@@ -4,7 +4,7 @@
 Es schließt die Lücke zwischen Spezifikation und Implementierung, da sie Modellierung auf einem abstraktem Level ermöglicht und eine detaillierte Beschreibung der Implementation liefert. \ac{SDL} verwendet ein  explizites  Nachrichtenkonzept,  welches  zwar  einen  erhöhten  Aufwand  bei  Modellerstellung und -pflege erfordert, dafür aber fehlerrobuster ist. 
 \subsection{Eignung und Uneignung von SDL}
 \label{ssc:SDL_Eignung}
-Da \ac{SDL} eine formale, objektorientierte Modellierungssprache ist, deckt sie somit die Formalen Kriterien der Korrektheit aus \pageref{ssc:Korrektheit}, sowie die der Strukturierbarkeit aus \pageref{ssc:Strukturierbarkeit} ab. Sowohl die Syntax als auch die Semantik der einzelnen Konstrukte und Konzepte werden präzise definiert und bieten somit keinen Interpretationsfreiraum. Es sichert Konsistenz und Klarheit über das Modell und eignet sich daher perfekt für kritische Kommunikationssysteme in denen harte Anforderungen gestellt werden. Ihre Strukturierbarkeit verdankt \ac{SDL} vor allem den Neuerungen aus Version \ac{SDL}-2000, welche die Sprache um objektorientierte Aspekte erweitert hat.
+Da \ac{SDL} eine formale, objektorientierte Modellierungssprache ist, deckt sie somit die formalen Kriterien der Korrektheit aus \cite{ssc:Korrektheit}, sowie die der Strukturierbarkeit aus \cite{ssc:Strukturierbarkeit} ab. Sowohl die Syntax als auch die Semantik der einzelnen Konstrukte und Konzepte werden präzise definiert und bieten somit keinen Interpretationsfreiraum. Es sichert Konsistenz und Klarheit über das Modell und eignet sich daher perfekt für kritische Kommunikationssysteme in denen harte Anforderungen gestellt werden. Ihre Strukturierbarkeit verdankt \ac{SDL} vor allem den Neuerungen aus Version \ac{SDL}-2000, welche die Sprache um objektorientierte Aspekte erweitert hat.
 
 Durch die Konzepte der Objektorientierung wie Kapselung, Vererbung, Polymorphismus und dynamischem Binden, kann das Modell in Teilmodelle modularisiert werden und außerdem die Wiederverwendbarkeit als auch die Wartbarkeit gesteigert werden. Dadurch eignet sich \ac{SDL} seitdem auch für die Entwicklung in mehreren größeren Teams. 
 
@@ -27,9 +27,8 @@ Da die Modellierungssprache unseres Erachtens nach sich nur auf geplante realit�
 
 \subsection{Fazit}
 \label{ssc:SDL_Fazit}
-Alles in allem ist \ac{SDL} eine sehr solide Modellierungssprache wenn es um formale Aspekte und den Einsatz in ihrer Hauptdomäne, der von verteilten Kommunikationsstrukturen, geht. Da sie formal präzise beschrieben ist, hat sie sich in Bereichen ansiedeln können, die eine höchste Zuverlässigkeit und Echtzeitanforderungen besitzen müssen. Eine Uneignung zeichnet sich jedoch ab, wenn die Sprache über den eigenen Sprachgebrauch verwendet werden soll. So kann sie beispielsweise nicht wie \ac{UML} in jeder Anwendungsdomäne gebraucht werden, so wie beispielsweise die Datenmodellierung von Datenbanksystemen. Tabelle \pageref{tab:EignungSDL} fasst noch einmal das wichtigste zusammen.
-
-\begin{tabularx}{\textwidth}{|l|X|X|}
+Alles in allem ist \ac{SDL} eine sehr solide Modellierungssprache wenn es um formale Aspekte und den Einsatz in ihrer Hauptdomäne, der von verteilten Kommunikationsstrukturen, geht. Da sie formal präzise beschrieben ist, hat sie sich in Bereichen ansiedeln können, die eine höchste Zuverlässigkeit und Echtzeitanforderungen besitzen müssen. Eine Uneignung zeichnet sich jedoch ab, wenn die Sprache über den eigenen Sprachgebrauch verwendet werden soll. So kann sie beispielsweise nicht wie \ac{UML} in jeder Anwendungsdomäne gebraucht werden, so wie beispielsweise die Datenmodellierung von Datenbanksystemen. Tabelle \ref{tab:EignungSDL} fasst noch einmal das wichtigste zusammen.
+\begin{tabularx}{\textwidth}{|p{2cm}|X|X|}
 	\hline
 	Kategorie & Eignung & Uneignung  \\
 	\hline
@@ -43,7 +42,7 @@ Alles in allem ist \ac{SDL} eine sehr solide Modellierungssprache wenn es um for
 		\item Kann wegen Formalisierung gut in Softwarewerkzeugen eingesetzt werden
 	\end{itemize} & \\
 	\hline
-	Anwenderbezogene Kriterien &
+	Anwender-bezogene Kriterien &
 	\begin{itemize}
 		\item Einfach und erlernbar, da verhältnismäßig wenige Sprachkonstrukte vorhanden sind
 		\item Fach nahe Nutzer dürften die Sprache in einem Angemessenen Rahmen erlernen können
@@ -56,9 +55,9 @@ Alles in allem ist \ac{SDL} eine sehr solide Modellierungssprache wenn es um for
 	\hline
 \end{tabularx} 
 \begin{table}[ht]
-	\begin{tabularx}{\textwidth}{|l|X|X|}
+	\begin{tabularx}{\textwidth}{|p{2cm}|X|X|}
 		\hline
-		Anwendungsbezogene	Kriterien &
+		Anwendungs-bezogene	Kriterien &
 		\begin{itemize}
 			\item Eignet sich hervorragend für Problemfelder der Telekommunikationsbranche
 			\item Geeignet für Anwendungen mit Echtzeitanforderungen wie der Luft- und Raumfahrt, Protokollentwicklung, verteilten Systemen, medizinischen Systemen usw. 
