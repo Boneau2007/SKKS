@@ -1,7 +1,7 @@
 
 \section{MSC}
 \label{sc:MSC}
-MSC ist von der International Telecommunication Union (ITU) normierte Sprache.  Sie hat eine graphiseche Notation, um den Benutzer zu darstellen, und eine textuelle Notation für die Bearbeitung durch Software-Werkzeuge, genauso wie bei SDL.
+MSC ist von der International Telecommunication Union (ITU) normierte Sprache.  Sie hat eine graphiseche Notation, um den Benutzer zu darstellen, und eine textuelle Notation für die Bearbeitung durch Software-Werkzeuge, genauso wie bei SDL\cite{MT009}.
 MSC bietet die Möglichkeit, das Kommunikationsverhalten zwischen Systemkomponenten und deren Umgebung zu beschreiben. Diese Kommunikations ist auf den Austaush von Nachrichten basiert.
 Mit Msc-Specifikationen können unterschiedliche Sichten auf das Systemverhalten erzeugt werden. 
 Dazu gibt MSC einen globalen Einblick auf das System aus, wie zum Beispiel die Interaktionen von alle Instanzen.\\
@@ -36,12 +36,9 @@ Part 1: Message Sequence Chart (MSC)
  
 
 Der Name von diesem Basic-MSC ist ProduktionAC und er muss oben in der Ecke geschrieben werden. Das Basic-MSC in diesem Beispiel beschreibt die Produktion eines Produkts, das aus einem A-Teil und einem C-Teil zusammengesetzt ist.
-<<<<<<< HEAD
-Die wichtige Elemente in dieser Abbildung sind: Der Produktionszelle, FabrikfürC und Fabrik von D. Das MSC beschreibt ein detaillierte Szenario vom Informationsaustausch zwischen diese drei Element.\\
 
-=======
 Die wichtige Elemente in dieser Abbildung sind: Der Produktionszelle, FabrikfürC und Fabrik von D. Das MSC beschreibt ein detaillierte Szenario vom Informationsaustausch zwischen diese drei Element. 
->>>>>>> 321950359661aae8443acada7239309cebbc5118
+
 Am Anfang ist der Produktionsprozess in seinem Initialzustand, Der ein benötige Bedingung für die nächste Aktionen ist. 
  Das System ist initialisiert und Teile
 der Typen C und D sind gefertigt, eingelagert und der
@@ -58,7 +55,7 @@ In der Gleichzeitig wird ein neues C-Teil wieder produziert und es ist jetzt ver
 \subsubsection{Instanz und Message}
 Instanzen und Nachrichten (Message) sind die wichtigste Sprachkunstrukte von Basic-MSC.
 Instanzen sind Komponenten, die mit der Systemumgebung oder untereinander
-asynchron Nachrichten austauschen können.\\
+asynchron Nachrichten austauschen können\cite{MT009}.\\
 Die Instanzen sind als vertikale Linien dargestell. Am Enfang dieser Linier findet man der Instanzkopf, wo der Instanzname spezifiziert wird. Zusätzlich kann man noch direkt über den Instanzkopf ein Typ zu dieser Instanz angeben (z.B. Instanz Produktionszelle vom Typ Roboterplatz in Abbildung).
 Die Linie der Instanzen endet sich mit einem Instanz-Ende-Symbol. Ein Instanz-End bedeutet, dass es in dem MSC keine weiteren Ereignisse für diese Instanz gibt, aber das bedeutet nicht unbedingt, dass die Instanz gestoppt ist.\\
 
@@ -95,7 +92,7 @@ den Parameter Prodzeit.
 Die Beschreibung vom Zustand definiert durch Condition ( Bedingung)
 Graphisch werden Conditions durch Sechsecke dargestellt,
 die die Instanzen, auf die sich die Condition bezieht,
-überdecken. Conditions werden zur Beschreibung von
+überdecken\cite{MT009}. Conditions werden zur Beschreibung von
 wichtigen Systemzuständen benutzt. In Abbildung befinden sich
 zwei Conditions, die Initialzustand heißt und den globalen Systemzustand beschreiben.
 
@@ -135,7 +132,7 @@ Die References sind mit abgerundeten Rechteck dargestellt (z.b Ein Reference ist
 
 
 \subsection{High-Level-MSC}
-High-Level-MSC ist auch als (HMSC) bekannt. Es ermöglicht eine kombinierte Darstellung von mehren MSCs auf abstrakter Ebene. Diese Kombination ist durch gerichteten Graphen beschriebt. Die Knoten eines HMSC-Diagramms sind ein Anfangsknoten, Endknoten, Konnektoren, References und Conditions.
+High-Level-MSC ist auch als (HMSC) bekannt. Es ermöglicht eine kombinierte Darstellung von mehren MSCs auf abstrakter Ebene. Diese Kombination ist durch gerichteten Graphen beschriebt. Die Knoten eines HMSC-Diagramms sind ein Anfangsknoten, Endknoten, Konnektoren, References und Conditions\cite{MT009}.
 \\ HMSC gibt ein globale Einblick von der gesamten Kombination von MSC-Diagrammen, damit kann man parallele, sequentielle alternative
 Kombination von MSCs in einer Einzige Abbildung und in einer sehr intuitiven Form beschreiben.\\
 

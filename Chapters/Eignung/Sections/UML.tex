@@ -65,8 +65,54 @@ Wir versuchen in diesem Abschnitt die Eignungen und Uneignungen von UML zusammen
 
 
 		
-		\includegraphics[scale=1]{Graphics/vornachteil.jpg} 
-		\captionof{figure}{Eignung und Uneignung von UML}
-		
-		
+\begin{tabularx}{\textwidth}{|p{2cm}|X|X|}
+	\hline
+	Kategorie & Eignung & Uneignung  \\
+	\hline
+	Formale Kriterien	&
+	\begin{itemize}
+		\item Die Korrektheit bei UML ist fast erfüllbar, da sie mit 16 Diagrammarten alle zulässigen Modelle zu generieren erlaubt
+		\item Vollständigkeit erfüllt, weil alle Konstrukte eindeutig definiert und beschrieben sind.
+		\item Strukturierbarkeit erfüllt: UML stellt Konstrukte bereit, die Strukturierung der modellierten Informationen unterstützt.
+		\item Standardisierte, weit verbreitete Methode 
+		\item Breites Angebot an Werkzeugen, Büchern und Schulung
+	\end{itemize} & 
+	\begin{itemize}
+		\item Einheitlichkeit nicht erfüllt, weil nicht alle Konstrukte der Sprache verständlich dargestellt und beschrieben sind.
+		\item Redundanzfreiheit nicht erfüllt, da UML paar Mehrfachdefinition von Konstrukten vornimmt, die denselben Sachverhalt beschreiben.
+	\end{itemize} \\
+	\hline
+	Anwender- bezogene Kriterien &
+	\begin{itemize}
+		\item Verständlichkeit: Viele Regeln sind einfach und lassen sich höchst effizient mit einer grafischen Darstellung abbilden.
+		\item Anschaulichkeit: Über ein Diagramm definierte Regeln sind für Anwender wie Anwendungsexperten gleichermaßen leicht verständlich.
+		\item Einfacher Modellaustausch möglich und damit bessere Modellwiederverwendung 
+	\end{itemize}  & 
+	\begin{itemize}
+		\item Einfachheit: Komplexe Regelwerke
+		\item Sehr großer Umfang und Komplexität der Sprache (beispielsweise umfasst die Sprachspezifikation mehr als 1200 Seiten) verursacht Schwierigkeiten bei der Benutzung und erfordert einen hohen Einarbeitungsaufwand 
+		\item Grundsätzliches IT-Wissen erforderlich 
+	\end{itemize} \\
+	\hline
+\end{tabularx} 
+
+	\begin{tabularx}{\textwidth}{|p{2cm}|X|X|}
+		\hline
+		Anwendungs- bezogene	Kriterien &
+		\begin{itemize}
+			\item Die Konstrukte der Sprache ermöglichen eine angemessene Detaillierung.
+			\item Mächtigkeit: Alle relevanten Sachverhalte sind mit der
+			Sprache in ausreichender Detaillierung darstellbar.
+			 
+			\item Operationalisierbarkeit: Ergebnisse der Modellierung in UML können zur Umsetzung in Software-Code verwendet werden. Es ist eine automatisierte Erzeugung eines Coderahmen aus den Diagrammen möglich wodurch der Programmier-Aufwand reduziert wird.
+			\item Überprüfbarkeit:  der Betrachter kann durch viele Diagrammarten einen Konsens über die geplanten Erwartungen erreichen.
+		\end{itemize}  & 
+		\begin{itemize}
+			\item Angemessenheit: viele unnötige Zusatzinformationen.
+			\item Konzeptionelle Schwächen, im Requirements Engineering insbesondere bei der Formulierung von Anwendungsfällen.
+			\item UML-Modelle sind Sammlungen von Einzelmodellen: Konsistenzprobleme, Problem des Zusammensuchens relevanter Information
+		\end{itemize} \\
+		\hline
+	\end{tabularx} 
+	\caption{Eignung und Uneignung von UML}
 		
