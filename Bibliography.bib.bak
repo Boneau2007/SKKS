@@ -120,6 +120,22 @@
   
 }
 
+@Book{MT015,
+  author    = {Sergej Schwenk},
+  title     = {Unified Modeling LanguageRational Rose},
+  year      = {1999},
+  url       = {http://docplayer.org/56618307-Unified-modeling-language-rational-rose.html,
+  
+}
+
+@Book{MT016,
+  author    = {Daniel Wenger},
+  title     = {Modellierung eines Geschäftsprozesses mit der Unified Modeling Language (UML)},
+  year      = {2002},
+  url       = {https://diuf.unifr.ch/main/is/sites/diuf.unifr.ch.main.is/files/documents/student-projects/S-2002_Daniel_Wenger.pdf.PDF,
+  
+}
+
 
 @TechReport{ITUT101_2016,
   author      = {International Telecommunication Union},
