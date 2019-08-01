@@ -1,24 +1,29 @@
 \section{Formale Kriterien}  
 
 Diese Kriterien dienen der maschinellen Prüfung von Modellen sowie der Berechnung von Modelleigenschaften. Werden die Anforderungen von der Modellierungssprache erfüllt, kann ein mit ihr geschaffenes Prozessmodell z. B. auf syntaktische Korrektheit überprüft werden. Die formalen Kriterien spielen eine besondere Rolle, wenn für die Modellierung Softwarewerkzeuge eingesetzt werden\cite{MT007}.\\
-Die formalen Kriterien werden in die folgende Einzelkriterien untergeteilt:  Korrektheit, Vollständigkeit, Einheitlichkeit, Redundanzfreiheit, Strukturierbarkeit, Wiederverwendbarkeit und Wartbarkeit.
+Die formalen Kriterien werden in die folgende Einzelkriterien unterteilt:  Korrektheit, Vollständigkeit, Einheitlichkeit, Redundanzfreiheit, Strukturierbarkeit, Wiederverwendbarkeit und Wartbarkeit.
 \subsection{Korrektheit}
+\label{ssc:Korrektheit}
 Das Kriterium der Korrektheit steht in Verbindung zum Grundsatz der Richtigkeit der Grundsätze ordnungsgemäßer Modellierung.
 Das Merkmal hier erfüllt, wenn man einfach die unkorrekte Modelle identifizieren kann.
 Bei diesem Kriterium gibt es zwei unterschiedliche Ausprägung der Korrektheit und sie sind: syntaktische- sowie die semantische -eindeutige Identifikation fehlerhafter Modelle. 
 Die syntaktische fehlerhafte Modelle sind eindeutig erkennbar ,d.h. die nicht eindeutig identifizierbar fehlerhafte Modelle sind korrekt. Der gleiche Fall ist bei der semantischen eindeutigen Identifikation fehlerhafter Modelle, wobei sind die semantische fehlerhafter Modelle eindeutig erkennbar, wenn die nicht eindeutig identifizierbar fehlerhafte Modelle richtig sind.
 \subsection{Vollständigkeit}
+\label{ssc:Vollständigkeit}
 Es geht hier um die Vollständigkeit der Sprachbeschreibung. Das Merkmal erfüllt, wenn alle benötigte Modelle mit dieser Modellierungssprache modellierbar sind.
 Ein vollständiges Modell kann erstellt werden, wenn alle Modelle und die Bedingungen ihrer Verwendung eindeutig und komplett definiert können.
 \subsection{Einheitlichkeit}
+\label{ssc:Einheitlichkeit}
 Unter Vollständigkeit wird in diesem Zusammenhang die ähnliche Darstellung von den ähnlichen Konzepte verstanden.
 Um das Merkmal der Einheitlichkeit zu erfüllen, muss alle Konstrukte der Sprache verständlich dargestellt und beschrieben werden.
 \subsection{Redundanzfreiheit}
+\label{ssc:Redundanzfreiheit}
 Die Redundanzfreiheit setzt voraus, dass die Sprache keine Mehrfachdefinition von Konstrukten vornimmt, die denselben Sachverhalt beschreiben. Ein und derselbe Sachverhalt sollte also nicht mit mehreren verschiedenen Elementen bzw. Symbolen der Modellierungssprache belegt sein\cite{MT007}.\\
 Der Redundanzfreiheit bedeutet, dass es keine redundante Informationen im Modell gibt. Die unnötige redundante Informationen können der Benutzer ablenken und sie hilfen auf keinen Fall in der Modellbeschreibung, sonst sie bilden mehr Komplexität im Modell und man soll dafür mehr Zeit investieren, um dieses Modell zu verstehen.
 Nur wenn im Modele die Redundanzen vermieden werden, kann ein
 redundanzfreie Modell erstellt werde.
 \subsection{Strukturierbarkeit, Wiederverwendbarkeit und Wartbarkeit}
+\label{ssc:Strukturierbarkeit}
 das letzte Teil von den formalen Kriterien ist die Strukturierbarkeit, Wiederverwendbarkeit und Wartbarkeit, die miteinander verbunden sind. Dabei sollte die Modellierungssprache Konstrukte bereitstellen, welche die Strukturierung der modellierten Informationen unterstützt.\\
 Die Modellierungssprache muss also Zerlegungen in Prozesskomponenten oder Teilprozesse darstellen können. Die Schnittstellen zwischen den Komponenten müssen übersichtlich dargestellt werden\cite{MT002}.
 Um das Merkmal zu erfüllen, müssen die Generalisierungen und die Spezialisierung schlüssig nachvollziehbar sein.\\

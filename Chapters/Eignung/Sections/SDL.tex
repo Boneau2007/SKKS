@@ -2,9 +2,9 @@
 \label{sc:SDLB}
 \ac{SDL} ist eine alte und häufig verwendete Modellierungssprache zum spezifizieren und beschreiben von verteilten Kommunikationssystemen. 
 Es schließt die Lücke zwischen Spezifikation und Implementierung, da sie Modellierung auf einem abstraktem Level ermöglicht und eine detaillierte Beschreibung der Implementation liefert. \ac{SDL} verwendet ein  explizites  Nachrichtenkonzept,  welches  zwar  einen  erhöhten  Aufwand  bei  Modellerstellung und -pflege erfordert, dafür aber fehlerrobuster ist. 
-\subsection{Eignung/Uneignung von SDL}
-\label{scc:SDL_Eignung}
-Da \ac{SDL} eine formale, objektorientierte Modellierungssprache ist, deckt sie somit die Formalen Kriterien der Korrektheit aus \pageref{scc:Korrektheit}, sowie die der Strukturierbarkeit aus \pageref{scc:Strukturierbarkeit} ab. Sowohl die Syntax als auch die Semantik der einzelnen Konstrukte und Konzepte werden präzise definiert und bieten somit keinen Interpretationsfreiraum. Es sichert Konsistenz und Klarheit über das Modell und eignet sich daher perfekt für kritische Kommunikationssysteme in denen harte Anforderungen gestellt werden. Ihre Strukturierbarkeit verdankt \ac{SDL} vor allem den Neuerungen aus Version \ac{SDL}-2000, welche die Sprache um objektorientierte Aspekte erweitert hat.
+\subsection{Eignung und Uneignung von SDL}
+\label{ssc:SDL_Eignung}
+Da \ac{SDL} eine formale, objektorientierte Modellierungssprache ist, deckt sie somit die Formalen Kriterien der Korrektheit aus \pageref{ssc:Korrektheit}, sowie die der Strukturierbarkeit aus \pageref{ssc:Strukturierbarkeit} ab. Sowohl die Syntax als auch die Semantik der einzelnen Konstrukte und Konzepte werden präzise definiert und bieten somit keinen Interpretationsfreiraum. Es sichert Konsistenz und Klarheit über das Modell und eignet sich daher perfekt für kritische Kommunikationssysteme in denen harte Anforderungen gestellt werden. Ihre Strukturierbarkeit verdankt \ac{SDL} vor allem den Neuerungen aus Version \ac{SDL}-2000, welche die Sprache um objektorientierte Aspekte erweitert hat.
 
 Durch die Konzepte der Objektorientierung wie Kapselung, Vererbung, Polymorphismus und dynamischem Binden, kann das Modell in Teilmodelle modularisiert werden und außerdem die Wiederverwendbarkeit als auch die Wartbarkeit gesteigert werden. Dadurch eignet sich \ac{SDL} seitdem auch für die Entwicklung in mehreren größeren Teams. 
 
@@ -14,20 +14,20 @@ Das Kriterium der Einheitlichkeit ist ebenso vorhanden, wie das der Redundanzfre
 
 Die frage nach der Einfachheit und Erlernbarkeit von \ac{SDL} ergibt sich aus der unseres Erachtens geringen Anzahl an Notationselementen und Begriffen, die in der Sprachdefinition spezifiziert sind. So definiert \ac{SDL} seine Agenten als gewisse Typen, gängige in der Fachterminologie verwendete Abstrakte Datentypen, Signale und Kanäle für die Kommunikation, sowie Sprachkonzepte der Objektorientierung. Dadurch lässt sich die Sprache mit verhältnismäßig wenig Aufwand erlernen und mögliche Schulungsmaßnahmen können gering gehalten werden.
 
-\ac{SDL}s Sprachkonzept bedient sich an vielen technischen Bezeichnungen aus der Telekommunikation und bezieht somit seinen Sprachraum aus dem informatisch, technischen Bereich. Dies ist dem geschuldet, da \ac{SDL} von Telekommunikationsfirmen  entwickelt und verabschiedet wurde um fachliche Kontexte aus der Telekommunikationsindustrie zu vereinheitlichen. Da wir nicht sehen, dass ein unfachlicher Sprachumfang für eine Fachperson als verständlich angesehen werden kann, so kann auch die Modellierungssprache als verständlich angesehen werden. \ac{SDL} eignet sich nicht für Fachfremde Benutzer, da für diese die Konzepte und Sprachmittel der Sprache nicht verständlich sein dürften. 
+\ac{SDL}s Sprachkonzept bedient sich an vielen technischen Bezeichnungen aus der Telekommunikation und bezieht somit seinen Sprachraum aus dem informatisch, technischen Bereich. Dies ist dem geschuldet, da \ac{SDL} von Telekommunikationsfirmen  entwickelt und verabschiedet wurde um fachliche Kontexte aus der Telekommunikationsindustrie zu vereinheitlichen. Da  ein fachlicher Sprachumfang für eine Fachperson als verständlich angesehen werden kann, ist auch die Modellierungssprache in Fach nahen Bereichen als verständlich anzusehen. \ac{SDL} eignet sich nicht für Fachfremde Benutzer, da für diese die Konzepte und Sprachmittel der Sprache nicht verständlich sein dürften. 
 
-Die Konstrukte welche \ac{SDL} in der Spezifikation erfasst sind, haben eine strukturierte Gliederung und heben sich untereinander durch ihre grafische Darstellung ab. Sie sind einfach gehalten und nur auf das nötigste begrenzt. Sie bestehen aus 2-Dimensionalen Piktogrammen und haben jeweils ihre eigene Form. Durch die Verwendung von objektorientierten Konzepten und der hierarchischen Gliederung wird die Lesbarkeit stark gefördert.
+Die Konstrukte welche \ac{SDL} in der Spezifikation erfasst sind, haben eine strukturierte Gliederung und heben sich untereinander durch ihre grafische Darstellung ab. Sie sind einfach gehalten und nur auf das nötigste begrenzt. Sie bestehen aus 2-Dimensionalen Piktogrammen und haben jeweils ihre eigene Form. Durch die Verwendung von objektorientierten Konzepten und der hierarchischen Gliederung wird die Lesbarkeit stark gefördert. Die Textuelle Notation hingegen ist für das Menschliche Auge nur mühsam zu erblicken.
 
 \ac{SDL} eignet sich aufgrund seiner Herkunft und durch die Personen, welche an der Spezifikation beteiligt waren hervorragend für die Modellierung von Problemfeldern in der Telekommunikationsbranche, da sich die Fachterminologie der Branche mit den Konzeptbezeichnungen der Modellierungssprache decken. Sie eignet sich eher nicht für die allgemeine Definition von Modellierungen in anderen Bereichen wie beispielsweise der Datenmodellierung in Datenbankensystemen.
 
 Da die \ac{SDL} eine formale Modellierungssprache mit abstrakter Syntax und kontextfrei ist, kann sie in der Chomsky-Hierarchie als eine Typ-2 kontextfreie Grammatik eingestuft werden. Dies würde die Mächtigkeit ihrer Sprache in der Automatentheorie beschreiben. Es ist also nicht entscheidbar ob ein Konstrukt der Sprache Eindeutig oder Mehrdeutig definiert ist. Da aber durch Testverfahren beim vergleichen der jeweiligen Konstrukte keine Mehrfachdefinition gefunden wurde, kann dies ausgeschlossen werden. Relativ zur Anwendungsdomäne betrachtet deckt die Spezifikation unter anderem Protokollspezifikationen in Kommunikationssystemen ab. Auch hier ist aber wieder die Mächtigkeit in Bezug auf eine beliebig andere Anwendungsdomäne nicht gegeben, da hier die nötigen Sprachkonstrukte und Vorschriften zur Abbildung fehlen. 
 
 \ac{SDL} lässt sich unseres Erachtens nicht mit in eine andere Modellierungssprache transformieren, dazu ist die Modellierungssprache zu stark abhängig von ihren domänenspezifischen Sprachkonzepten. Genauso ist sie schlecht darin andere Sachverhalte als Spezifizierung und Verhaltensbeschreibung darzustellen, da ihr die nötigen Sprachmittel aus der Spezifikation fehlen. Beispielsweise kann sie nicht so für Testfälle verwendet werden wie dies bei \ac{MSC} der Fall ist.
-Da die Modellierungssprache unseres Erachtens nach sich nur auf geplante realitäten bezieht und faktische nicht mit einbezieht, kann eine Einschätzung nur durch die Betrachter erfolgen und somit ist eine Betrachtung der Überprüfbarkeit nur schwer von uns vornehmbar und muss von Modell zu Sachverhalt einzeln abgewogen werden.
+Da die Modellierungssprache unseres Erachtens nach sich nur auf geplante realitäten bezieht und faktische nicht mit einbezieht, kann eine Einschätzung nur durch die Betrachter erfolgen und somit ist eine Betrachtung der Überprüfbarkeit nur schwer von uns vernehmbar und muss von Modell zu Sachverhalt einzeln abgewogen werden.
 
 \subsection{Fazit}
-\label{scc:SDL_Fazit}
-Alles in allem ist \ac{SDL} eine sehr solide Modellierungssprache wenn es um formale Aspekte und den Einsatz in ihrer Hauptdomäne, der von verteilten Kommunikationsstrukturen, geht. Da sie formal präzise beschrieben ist, hat sie sich in Bereichen ansiedeln können, die eine höchste Zuverlässigkeit und Echtzeitanforderungen besitzen müssen. Eine Uneignung zeichnet sich jedoch ab, wenn die Sprache über den eigenen Sprachgebrauch verwendet werden soll. So kann sie beispielsweise nicht wie \ac{UML} in jeder Anwendungsdomäne gebraucht werden, worunter unter anderem Datenmodellierung von Datenbanksystemen gehört.  
+\label{ssc:SDL_Fazit}
+Alles in allem ist \ac{SDL} eine sehr solide Modellierungssprache wenn es um formale Aspekte und den Einsatz in ihrer Hauptdomäne, der von verteilten Kommunikationsstrukturen, geht. Da sie formal präzise beschrieben ist, hat sie sich in Bereichen ansiedeln können, die eine höchste Zuverlässigkeit und Echtzeitanforderungen besitzen müssen. Eine Uneignung zeichnet sich jedoch ab, wenn die Sprache über den eigenen Sprachgebrauch verwendet werden soll. So kann sie beispielsweise nicht wie \ac{UML} in jeder Anwendungsdomäne gebraucht werden, so wie beispielsweise die Datenmodellierung von Datenbanksystemen. Tabelle \pageref{tab:EignungSDL} fasst noch einmal das wichtigste zusammen.
 
 \begin{tabularx}{\textwidth}{|l|X|X|}
 	\hline
@@ -35,20 +35,46 @@ Alles in allem ist \ac{SDL} eine sehr solide Modellierungssprache wenn es um for
 	\hline
 	Formale Kriterien	&
 	\begin{itemize}
-		\item 
+		\item Formal sehr stark beschrieben
+		\item Klare widerspruchsfreie, präzise und übersichtlich definierte Konzepte und Konstrukte
+		\item Einfachheit, da Synthese gleich Analyse
+		\item Sie ist in sich Konsistenz und die Sprachbausteine sind Konform zu ihrer Spezifikation
+		\item Verminderung von Komplexität und Erhöhung der Strukturierbarkeit durch Objektorientierte Lösungsansätze
 	\end{itemize} & \\
 	\hline
 	Anwenderbezogene Kriterien &
 	\begin{itemize}
-		\item
+		\item Einfach und erlernbar, da verhältnismäßig wenige Sprachkonstrukte vorhanden sind
+		\item Fach nahe Nutzer dürften die Sprache in einem Angemessenen Rahmen erlernen können
+		\item Ist Anschaulich durch die Grafische Repräsentation 2-Dimensionaler Konstrukte und den Konzepten der Objektorientierung
 		\end{itemize}  & 
 	\begin{itemize}
-		\item 
+		\item Fach ferne Nutzer dürften mit der Fachterminologie Schwierigkeiten haben
+		\item Unübersichtlich ist ist die Textuelle Repräsentation der Konzepte und Konstrukte, worunter die Verständlichkeit leidet
 	\end{itemize} \\
 	\hline
-	Anwendungsbezogene Kriterien &
-	\begin{itemize}
-		\item Aufwendige aber fehlerrobuste	Modellierung von Kommunikation durch Nachrichtenkanäle.
-	\end{itemize}   & \\
-	\hline
 \end{tabularx} 
+
+\pagebreak
+\begin{table}[ht]
+\begin{tabularx}{\textwidth}{|l|X|X|}
+	\hline
+	Anwendungsbezogene	Kriterien &
+	\begin{itemize}
+		\item Eignet sich hervorragend für Problemfelder der Telekommunikationsbranche
+		\item Geeignet für Anwendungen mit Echtzeitanforderungen wie der Luft- und Raumfahrt, Protokollentwicklung, verteilten Systemen, medizinischen Systemen usw. 
+		\item Aufwendige aber fehlerrobuste	Modellierung von Kommunikation durch Nachrichtenkanäle.
+		\item Ist in den benutzen Anwendungsgebieten von Kommunikationssystemen ausreichend mächtig um die Sachverhalte darstellen zu können
+		\item Ist in ihrer Überprüfbarkeit von ihrem Einsatzort abhängig, aber in ihrer gängigen Anwendungsdomäne überprüfbar. 
+	\end{itemize}   &
+
+\begin{itemize}
+	\item Ungeeignet für Anwendungen wie Prozessdarstellung, Datenbanksysteme und allgemeineren Anwendungsbereichen
+	\item Sprachkonstrukte für Anwendungsbereiche  wie Datenmodellierung fehlen
+	\hline Lässt sich nicht in andere Modellierungssprachen transformieren
+	\hline Ist schlecht prüfbar außerhalb ihres gängigen Domänenspezifischen Einsatzes.
+\end{itemize}
+\end{tabularx} 
+\caption{Eignung und Uneignung von SDL}
+\label{tab:EignungSDL}
+\end{table} 
