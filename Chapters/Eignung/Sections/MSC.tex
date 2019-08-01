@@ -7,16 +7,26 @@
 
 Auch unter dem Aspekt der Vollständigkeit ist \ac{MSC} durch ihre Beschreibung in der Spezifikation in ihrem Sprachgebrauch vollständig.
 
-Genauso sind die Konzepte und Konstrukte einheitlich definiert und in der Spezifikation beschrieben. Grundsätzlich kommt Redundanz in \ac{MSC} nicht vor, zumindest nicht bei der reinen Definition der Konstrukte. Jedoch ist es möglich redundante Informationen in einem Modell abzubilden so könnten im Modell mehrfach hintereinander Events an Instanzen versendet werden. Zugegeben wäre dies simpel zu lösen, jedoch ist es grundsätzlich möglich.
+Genauso sind die Konzepte und Konstrukte einheitlich definiert und in der Spezifikation beschrieben. Grundsätzlich kommt Redundanz in \ac{MSC} nicht vor dazu kann jede Instanz nur einmal definiert werden und jede Nachricht in genau einem Input und Output enthalten sein.
+
 MSC definiert dabei Instanztypen als Antwort auf eine objektorientierte Modellierung. Sowie Vererbung von Typen. Dadurch Eignet sich der Einsatz von \ac{MSC} mit anderen objektorientierten Programmiersprachen.
 
-Die Sprache ist extrem einfach für den Anwender und Leser zu erlernen da nur äußerst wenig Konstrukte der Sprache definiert sind. So ist ihre Spezifikation gerade mal um die 135 Seiten groß. Das verschafft ihr eine
+Die Sprache ist extrem einfach für den Anwender und Leser zu erlernen da nur äußerst wenig Konstrukte der Sprache definiert sind. So ist ihre Spezifikation gerade mal um die 135 Seiten groß. Zwar wird auch hier wieder auf kosten der Verständlichkeit Fachvokabular aus dem Telekommunikationsbereich verwendet jedoch ist wegen des geringen Sprachumfangs dies für Fachexperten und fachunkundige vernachlässigbar. Symbole sind einfach beschrieben und werden auch im Alltag verwendet.
+
+Da das \ac{MSC} Nachrichtenabläufe zwischen Objekten modelliert, kann es das Interaktionsverhalten zeitlichen zwischen den Objekten anschaulich wiedergeben. Es obliegt jedoch auch hier wieder dem Betrachter ob das betrachtete Modell wirklich anschaulich ist.Ein Chart in \ac{MSC} ist dabei ähnlich anschaulich wie das Sequenzdiagramm von UML.
+
+Auch ist wieder in diesem Fall eine Einschätzung über die Angemessenheit schwierig zu treffen. in Bereichen wie der Protokollspezifizierung enthält die Sprache angemessene Konstrukte jedoch kann dies bei Anwendungsbereichen in denen keine einfache Kommunikation zwischen Objekten vorherrscht sich schwierig gestalten.
+
+Vollständige Systeme können mit \ac{MSC} alleine nicht erstellt werden, dazu sind andere Modellierungssprachen notwendig, welche \ac{MSC} bei der Umsetzung unterstützen. Die Mächtigkeit ist demnach gemessen nicht so hoch wie bei Anderen  Modellierungssprachen, reicht aber für ihren Anwendungszweck vollkommen aus.
+Operationalisierbarkeit ist in \ac{MSC} gegeben, so können zum Beispiel beliebige Charts in Kommunikationsdiagramme transformiert werden. Es ist jedoch nicht möglich den Kontext in ein  Strukturdiagramm zu übertragen, da dem Model dazu die nötigen Informationen wie  Beziehungen fehlen.
+
+
 \subsection{Fazit}
 \label{sc:MSCFazit}
-Da \ac{MSC} von derselben Arbeitsgruppe erstellt worden ist wie \ac{SDL}, ist die Philosophie zur Erstellung der Modellierungssprache eine ähnliche. Deswegen decken sich viele formale Kriterien mit \ac{SDL}. Sie kann gut für den Einsatzzweck einer teilweisen Spezifikation wie der Beschreibung von Szenarios mitwirken.
+Da \ac{MSC} von derselben Arbeitsgruppe erstellt worden ist wie \ac{SDL}, ist die Philosophie zur Erstellung der Modellierungssprache eine ähnliche. Deswegen decken sich viele formale Kriterien mit \ac{SDL}. \ac{MSC} wird oft in Verbindung mit anderen Modellierungssprachen in der Systemtechnik zum erstellen dieser verwendet. Die Interaktionsmöglichkeit mit vielen Anwendungsdomänen wie der Elektrotechnik, Mechanik erhöht ihren Einsatzort stark. Folgende Tabelle fasst die wichtigsten punkte noch einmal zusammen.
 
 \begin{table}[ht]
-	\begin{tabularx}{\textwidth}{|l|X|X|}
+	\begin{tabularx}{\textwidth}{|p{2cm}|X|X|}
 		\hline
 		Formale	Kriterien &
 		\begin{itemize}
@@ -29,16 +39,26 @@ Da \ac{MSC} von derselben Arbeitsgruppe erstellt worden ist wie \ac{SDL}, ist di
 			\item fehlen
 		\end{itemize} \\
 	\hline
-	Anwenderbezogene Kriterien &
+	Anwender-bezogene Kriterien &
 	\begin{itemize}
 		\item Sehr einfach zu erlernen, da extrem kleiner Sprachumfang
-		\item 
-	\end{itemize}  & 
-	\begin{itemize}
-		\item fehlen
-	\end{itemize} \\
+		\item Anschauliche Darstellung des zeitlichen Kommunikationsablaufs zweier oder mehreren Objekten
+	\end{itemize}  &  \\
+		\hline
+	Anwendungs-bezogene Kriterien &
+		\begin{itemize}
+			\item Starker Anwendungsbezug zur Telekommunikationsbrache
+			\item Kann leicht abgewandelt in UML als Sequenzdiagramm eingesetzt werden
+			\item Bedingte Operationalisierbarkeit in andere Diagrammarten
+		\end{itemize}  & 
+		\begin{itemize}
+			\item Vergleichsweise geringe Mächtigkeit zum zu modellierenden Anwendungszweck
+			\item Schwierige Einschätzung ob die Modelle Angemessen im Anwendungsbereich sind
+			\item Beschreibt lediglich mögliches Systemverhalten, nicht tatsächliches
+			\item Es kann kein Verhalten verboten werden
+		\end{itemize} \\
 		\hline
 	\end{tabularx} 
-	\caption{Eignung und Uneignung von SDL}
-	\label{tab:EignungSDL}
+	\caption{Eignung und Uneignung von MSC}
+	\label{tab:EignungMSC}
 \end{table} 
